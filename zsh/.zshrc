@@ -264,6 +264,10 @@ alias workFE="tmuxinator workFE"
 
 alias workBE="tmuxinator workBE"
 
+alias df="tmuxinator df"
+
+alias pcstatus="tmuxinator pcstatus"
+
 eval "$(rbenv init -)"
 
 
