@@ -7,4 +7,5 @@ stow zsh
 #stow Xresources
 stow tmux
 #stow compton
+stow tmuxinator
 echo "We are done restoring dotfiles!"
