@@ -268,9 +268,12 @@ alias df="tmuxinator df"
 
 alias pcstatus="tmuxinator pcstatus"
 
+alias bangProj='tmuxinator bangProj'
+
 alias fuck='sudo !!'
 
 alias update='brew update && brew upgrade && brew cask upgrade && brew cleanup'
+
 
 # alias mmaster='git checkout master; git pull; git merge development; git push; git checkout development'
 
