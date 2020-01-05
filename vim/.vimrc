@@ -6,7 +6,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-commentary'
 Plug 'kabbamine/vcoolor.vim'
 Plug 'ntpeters/vim-better-whitespace'
@@ -25,11 +25,11 @@ Plug 'tpope/vim-surround'
 "Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/matchit.zip'
 Plug 'jiangmiao/auto-pairs'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'honza/vim-snippets'
-Plug 'epilande/vim-es2015-snippets'
-Plug 'epilande/vim-react-snippets'
+"Plug 'honza/vim-snippets'
+"Plug 'epilande/vim-es2015-snippets'
+"Plug 'epilande/vim-react-snippets'
 "Plug 'othree/html5.vim', { 'for': 'html'  }
 "Plug 'othree/yajs.vim', { 'for': [ 'javascript', 'javascript.jsx', 'html' ] }
 Plug 'moll/vim-node', { 'for': 'javascript' }
@@ -63,7 +63,7 @@ Plug 'nvie/vim-flake8'
 "Plug 'vim-scripts/Conque-GDB'
 call plug#end()
 
-let g:coc_global_extensions = ["coc-json", "coc-tsserver", "coc-html", "coc-css", "coc-highlight", "coc-emmet", "coc-snippets", "coc-git", "coc-prettier"]
+let g:coc_global_extensions = ["coc-json", "coc-tsserver", "coc-html", "coc-css", "coc-highlight", "coc-emmet", "coc-snippets", "coc-git", "coc-prettier", "https://github.com/xabikos/vscode-react", "https://github.com/dsznajder/vscode-es7-javascript-react-snippets", "https://github.com/skyran1278/js-jsx-snippets", "https://github.com/nathanchapman/vscode-javascript-snippets"]
 
 "map Ranger File Tree
 let g:ranger_map_keys = 0
@@ -202,7 +202,7 @@ set wildmode=longest:full,full
 
 "set cursorline
 
-" set number
+set number
 
 function! LineNumberToggle()
   if(&relativenumber == 1)
@@ -225,7 +225,7 @@ map <C-n> :NERDTreeToggle<CR>
 " ALE Config.  more below
 " Enable completion where available.
  " This setting must be set before ALE is loaded.
- let g:ale_completion_enabled = 1
+ " let g:ale_completion_enabled = 1
  set wildmode=longest:full,full
 
 
@@ -361,16 +361,16 @@ let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
 " In ~/.vim/vimrc, or somewhere similar.
-let g:ale_fixers = {
- \   '*': ['remove_trailing_lines', 'trim_whitespace'],
- \   'javascript': ['eslint', 'prettier'],
- \}
+" let g:ale_fixers = {
+"  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+"  \   'javascript': ['eslint', 'prettier'],
+"  \}
 " Set this variable to 1 to fix files when you save them.
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 " set to 0 to disable fix files on save
 "let g:ale_fix_on_save = 0
 "leader key for prettier and ale
-nmap <leader>d <Plug>(ale_fix)
+" nmap <leader>d <Plug>(ale_fix)
 set completeopt+=noinsert
 
 " config add file
@@ -460,23 +460,23 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 " ALE
-let g:ale_set_highlights = 0
-let g:ale_change_sign_column_color = 0
-"let g:ale_sign_column_always = 1
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '⚠'
-let g:ale_echo_msg_error_str = '✖'
-let g:ale_echo_msg_warning_str = '⚠'
-let g:ale_echo_msg_format = '%severity% %s% [%linter%% code%]'
-let g:ale_completion_enabled = 0
+"let g:ale_set_highlights = 0
+"let g:ale_change_sign_column_color = 0
+""let g:ale_sign_column_always = 1
+"let g:ale_sign_error = '✖'
+"let g:ale_sign_warning = '⚠'
+"let g:ale_echo_msg_error_str = '✖'
+"let g:ale_echo_msg_warning_str = '⚠'
+"let g:ale_echo_msg_format = '%severity% %s% [%linter%% code%]'
+"let g:ale_completion_enabled = 0
 
 
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_fixers['json'] = ['prettier']
-let g:ale_fixers['css'] = ['prettier']
-let g:ale_javascript_prettier_use_local_config = 1
-let g:ale_fix_on_save = 1
+"let g:ale_fixers = {}
+"let g:ale_fixers['javascript'] = ['prettier']
+"let g:ale_fixers['json'] = ['prettier']
+"let g:ale_fixers['css'] = ['prettier']
+"let g:ale_javascript_prettier_use_local_config = 1
+"let g:ale_fix_on_save = 1
 
 "syntax enable
 " make the highlighting of tabs and other non-text less annoying
@@ -643,3 +643,51 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+
+"SNIPPETS
+"nfn const fn = (params) => {}
+"clo console.log(':',)
+"imp import moduleName from 'module'
+"imd import { destructuredModule } from 'module'
+"exp export default moduleName
+"exd export { destructuredModule } from 'module'
+"sw switch statment
+"fl basic for loop
+"dob const {propName} = objectToDestructure
+"dar const [propName] = arrayToDestructure
+"imr import React from 'react'
+"imrd import ReactDOM from 'react-dom'
+"imrc import React, { Component } from 'react'
+"imrs import React, { useState } from 'react'
+"imrse import React, { useState, useEffect } from 'react'
+"ren render() { return(  ) }
+"rfce and or rfc react functional component export
+"l= let {${1:name}} = ${2:value}
+"co= const {${1:name}} = ${2:value}
+"if if statment
+"el else statment
+"ife if else statment
+"ei else if statment
+"ter ternary operator
+"tc try catch
+"tcf try catch finally
+"af arrow function
+"afb arrow function with body
+"fe forEach loop
+"map map
+"reduce
+"filter
+"ol obj literal
+"slol same line obj literal
+"kv key/value pair
+"r return
+"rc return component
+"cb node.js style callback
+"re require
+"rel require ./ local
+"req require assignment
+"reql require local assignment
+"dreq
+"dreql
+"me module.exports
+"meo module.exports = {}
