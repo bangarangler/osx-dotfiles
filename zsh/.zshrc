@@ -274,6 +274,8 @@ alias fuck='sudo !!'
 
 alias update='brew update && brew upgrade && brew cask upgrade && brew cleanup'
 
+alias dc="docker container"
+
 
 # alias mmaster='git checkout master; git pull; git merge development; git push; git checkout development'
 
