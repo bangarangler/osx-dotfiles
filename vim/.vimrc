@@ -65,7 +65,7 @@ Plug 'nvie/vim-flake8'
 Plug 'ekalinin/dockerfile.vim'
 call plug#end()
 
-let g:coc_global_extensions = ["coc-json", "coc-tsserver", "coc-html", "coc-css", "coc-highlight", "coc-emmet", "coc-snippets", "coc-git", "coc-prettier", "https://github.com/xabikos/vscode-react", "https://github.com/dsznajder/vscode-es7-javascript-react-snippets", "https://github.com/skyran1278/js-jsx-snippets", "https://github.com/nathanchapman/vscode-javascript-snippets"]
+let g:coc_global_extensions = ["coc-json", "coc-tsserver", "coc-html", "coc-css", "coc-highlight", "coc-emmet", "coc-snippets", "coc-git", "coc-prettier", "https://github.com/xabikos/vscode-react", "https://github.com/dsznajder/vscode-es7-javascript-react-snippets", "https://github.com/skyran1278/js-jsx-snippets", "https://github.com/nathanchapman/vscode-javascript-snippets", "https://github.com/florinpatrascu/vscode-elixir-snippets", "coc-elixir", "coc-docker"]
 
 "map Ranger File Tree
 let g:ranger_map_keys = 0
