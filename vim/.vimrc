@@ -1,11 +1,13 @@
 call plug#begin()
-"Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'kien/rainbow_parentheses.vim'
+" Plug 'junegunn/rainbow_parentheses.vim'
+" Plug 'kien/rainbow_parentheses.vim'
+Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 "Plug 'scrooloose/nerdcommenter'
 " Plug 'tpope/vim-commentary'
 Plug 'tomtom/tcomment_vim'
@@ -18,10 +20,11 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'ervandew/supertab'
 "Plug 'valloric/youcompleteme', { 'do': 'python3 install.py --ts-completer' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 Plug 'sirver/ultisnips'
-"Plug 'isruslan/vim-es6'
+" Plug 'isruslan/vim-es6'
 Plug 'sheerun/vim-polyglot'
+" Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-surround'
 "Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/matchit.zip'
@@ -33,9 +36,9 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'epilande/vim-react-snippets'
 "Plug 'othree/html5.vim', { 'for': 'html'  }
 "Plug 'othree/yajs.vim', { 'for': [ 'javascript', 'javascript.jsx', 'html' ] }
-Plug 'moll/vim-node', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] }
-let g:jsx_ext_required = 0
+" Plug 'moll/vim-node', { 'for': 'javascript' }
+" Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] }
+" let g:jsx_ext_required = 0
 "Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
 "Plug 'groenewege/vim-less', { 'for': 'less' }
 "Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
@@ -121,7 +124,6 @@ vnoremap <C-k> :m '>-1<CR>gv=gv
 packadd! matchit
 :source $VIMRUNTIME/macros/matchit.vim
 syntax on
-"color dracula
 let g:javascript_plugin_jsdoc = 1
 set clipboard=unnamed
 "set pastetoggle=<F2>
@@ -129,10 +131,7 @@ set mouse=a
 set t_Co=256
 let g:dracula_italic = 0
 colorscheme dracula
-"colo dracula
 highlight Normal ctermbg=None
-"set t_Co=256
-"let g:colors_name = 'dracula'
 
  ":read ~/.vim/templates/htmlskeleton.sh
  "
@@ -166,9 +165,13 @@ nnoremap <Leader>t :Tags<CR>
 set tags=tags
 
 
-
 " set leaderf to open FZF
 nmap <Leader>f :FZF<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+  \}
 
 
 " settings for vcoolor
@@ -230,39 +233,39 @@ map <C-n> :NERDTreeToggle<CR>
  " let g:ale_completion_enabled = 1
  set wildmode=longest:full,full
 
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 " better rainbow parentheses color options
-let g:rbpt_colorpairs = [
-		\ ['darkMagenta',       'RoyalBlue3'],
-		\ ['Darkblue',    'SeaGreen3'],
-		\ ['darkgray',    'DarkOrchid3'],
-		\ ['darkgreen',   'seagreen3'],
-		\ ['darkcyan',    'RoyalBlue3'],
-		\ ['darkblue',     'SeaGreen3'],
-		\ ['darkmagenta', 'DarkOrchid3'],
-		\ ['darkMagenta',       'seagreen3'],
-		\ ['gray',        'RoyalBlue3'],
-		\ ['darkcyan',       'SeaGreen3'],
-		\ ['darkmagenta', 'DarkOrchid3'],
-		\ ['Darkblue',    'darkcyan'],
-		\ ['darkgreen',   'RoyalBlue3'],
-		\ ['darkcyan',    'SeaGreen3'],
-		\ ['lightmagenta',     'DarkOrchid3'],
-		\ ['lightcyan',         'darkmagenta'],
-		\ ]
+" let g:rbpt_colorpairs = [
+" 		\ ['darkMagenta',       'RoyalBlue3'],
+" 		\ ['Darkblue',    'SeaGreen3'],
+" 		\ ['darkgray',    'DarkOrchid3'],
+" 		\ ['darkgreen',   'seagreen3'],
+" 		\ ['darkcyan',    'RoyalBlue3'],
+" 		\ ['darkblue',     'SeaGreen3'],
+" 		\ ['darkmagenta', 'DarkOrchid3'],
+" 		\ ['darkMagenta',       'seagreen3'],
+" 		\ ['gray',        'RoyalBlue3'],
+" 		\ ['darkcyan',       'SeaGreen3'],
+" 		\ ['darkmagenta', 'DarkOrchid3'],
+" 		\ ['Darkblue',    'darkcyan'],
+" 		\ ['darkgreen',   'RoyalBlue3'],
+" 		\ ['darkcyan',    'SeaGreen3'],
+" 		\ ['lightmagenta',     'DarkOrchid3'],
+" 		\ ['lightcyan',         'darkmagenta'],
+" 		\ ]
 
 
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" let g:rbpt_max = 16
+" let g:rbpt_loadcmd_toggle = 0
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 "augroup filetype javascript syntax=javascript
 "autocmd FileType javascript syntax clear jsFuncBlock jsFuncArgs
-
 
 "This is syntastic settings
 "set statusline+=%#warningmsg#
