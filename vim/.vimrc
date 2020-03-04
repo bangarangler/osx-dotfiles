@@ -43,7 +43,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
 "Plug 'groenewege/vim-less', { 'for': 'less' }
 "Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-"Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+" Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'gko/vim-coloresque'
 "Plug 'stephenway/postcss.vim', { 'for': 'css' }
 "Plug 'elzr/vim-json', { 'for': 'json'  }
