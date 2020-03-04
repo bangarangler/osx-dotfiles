@@ -1,6 +1,7 @@
 call plug#begin()
 " Plug 'junegunn/rainbow_parentheses.vim'
 " Plug 'kien/rainbow_parentheses.vim'
+Plug 'kshenoy/vim-signature'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
