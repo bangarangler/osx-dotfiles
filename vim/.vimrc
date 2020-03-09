@@ -460,10 +460,9 @@ nnoremap <space> za
 
 "  shortcut to save
  nmap <leader>w :w<cr>
+ nmap <leader>wa :wa<cr>
 
  "edit ~/.vim
- "
- "
  map <leader>ev :e! ~/.vimrc<cr>
 
  " scroll the viewport faster
