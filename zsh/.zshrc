@@ -95,9 +95,9 @@ SPACESHIP_DIR_TRUNC='1' # show only last directory
 #SPACESHIP_VENV_SUFFIX=") "
 
 ## PYENV
-#SPACESHIP_PYENV_PREFIX="python:("
-#SPACESHIP_PYENV_SUFFIX=") "
-#SPACESHIP_PYENV_SYMBOL=""
+SPACESHIP_PYENV_PREFIX="python:("
+SPACESHIP_PYENV_SUFFIX=") "
+SPACESHIP_PYENV_SYMBOL=""
 #ZSH_THEME="spaceship"
 #SPACESHIP_PROMPT_ADD_NEWLINE=”true”
 #SPACESHIP_CHAR_SYMBOL=”\ue77d"
@@ -240,7 +240,7 @@ alias lady='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/lady.txt'
 #PYTHON
 #alias 2='python2'
 #alias 3='python3'
-alias python='python3'
+# alias python='python3'
 
 #date | lolcat
 #lolcat /Users/jonathanpalacio/Desktop/dev/ascii/skull.txt
@@ -309,3 +309,6 @@ function stowrestore() {
   ~/dotfiles/
   ../dotfiles/stowrestore
 }
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
