@@ -309,6 +309,19 @@ function stowrestore() {
   ~/dotfiles/
   ../dotfiles/stowrestore
 }
+
+# // trying to get openssl to work on new osx delete this later
+# export CFLAGS="-I$(brew --prefix openssl)/include" \
+# export LDFLAGS="-L$(brew --prefix openssl)/lib" \
+
+# message after reinstalling openssl
+#export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+#export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+#export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+#export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
