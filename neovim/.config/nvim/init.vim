@@ -4,6 +4,7 @@ call plug#begin()
 Plug 'kshenoy/vim-signature'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-fugitive'
+Plug 'idanarye/vim-merginal'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -205,6 +206,8 @@ nnoremap gd2 :diffget //2<CR>
 nnoremap gd3 :diffget //3<CR>
 " :diffupdate -- fix spacing after change
 nnoremap gdu :diffupdate<CR>
+" :Merginal plugin for branches
+nnoremap <leader>gm :Merginal<CR>
 
 
 set showmatch
