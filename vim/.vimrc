@@ -18,6 +18,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'easymotion/vim-easymotion'
 Plug 'mattn/emmet-vim'
 "Plug 'scrooloose/syntastic'
+" Plug 'davidcelis/vim-ariake-dark'
 Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'ervandew/supertab'
 "Plug 'valloric/youcompleteme', { 'do': 'python3 install.py --ts-completer' }
@@ -122,6 +123,10 @@ vnoremap <C-k> :m '>-1<CR>gv=gv
 " global search and replace with confirm y or n
 ":%s/img/jpg/gc
 
+" packadd! dracula_pro
+"
+" syntax enable
+" colorscheme dracula_pro
 
 "matchit.vim
 :filetype plugin on
@@ -135,6 +140,7 @@ set mouse=a
 set t_Co=256
 let g:dracula_italic = 0
 colorscheme dracula
+" colorscheme Ariake-Dark
 highlight Normal ctermbg=None
 
  ":read ~/.vim/templates/htmlskeleton.sh
