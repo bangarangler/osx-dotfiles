@@ -96,6 +96,7 @@ let g:vista_fzf_preview = ['right:50%']
 
 map <leader>v :Vista!!<CR>
 map <leader>vc :Vista coc<CR>
+map <leader>vf :Vista finder coc<CR>
 
 "set termguicolors
 filetype plugin indent on
