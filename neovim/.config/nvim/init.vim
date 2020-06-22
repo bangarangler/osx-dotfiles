@@ -1,6 +1,7 @@
 call plug#begin()
 " Plug 'junegunn/rainbow_parentheses.vim'
 " Plug 'kien/rainbow_parentheses.vim'
+Plug 'liuchengxu/vista.vim'
 Plug 'unblevable/quick-scope'
 Plug 'kshenoy/vim-signature'
 Plug 'luochen1990/rainbow'
@@ -92,6 +93,13 @@ map <leader><leader>cl :CocInstall https://github.com/xabikos/vscode-javascript<
 "RangerCurrentFileNewTab
 "RangerCurrentDirectoryNewTab
 "RangerWorkingDirectoryNewTab
+
+"VISTA SETTINGS
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_fzf_preview = ['right:50%']
+
+map <leader>v :Vista!!<CR>
+map <leader>vc :Vista coc<CR>
 
 " ranger for nvim
 
