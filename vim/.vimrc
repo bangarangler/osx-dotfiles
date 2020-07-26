@@ -35,7 +35,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/matchit.zip'
 Plug 'jiangmiao/auto-pairs'
 "Plug 'w0rp/ale'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'honza/vim-snippets'
 "Plug 'epilande/vim-es2015-snippets'
 "Plug 'epilande/vim-react-snippets'
@@ -74,7 +74,7 @@ Plug 'ekalinin/dockerfile.vim'
 call plug#end()
 
 "https://github.com/dsznajder/vscode-es7-javascript-react-snippets"
-let g:coc_global_extensions = ["coc-json", "coc-tsserver", "coc-html", "coc-css", "coc-highlight", "coc-emmet", "coc-snippets", "coc-git", "coc-prettier", "https://github.com/xabikos/vscode-react",  "https://github.com/skyran1278/js-jsx-snippets", "https://github.com/nathanchapman/vscode-javascript-snippets", "https://github.com/florinpatrascu/vscode-elixir-snippets", "coc-elixir", "coc-docker", "https://github.com/xabikos/vscode-javascript"]
+let g:coc_global_extensions = ["coc-json", "coc-tsserver", "coc-html", "coc-css", "coc-highlight", "coc-emmet", "coc-snippets", "coc-git", "coc-prettier", "https://github.com/xabikos/vscode-react",  "https://github.com/skyran1278/js-jsx-snippets", "https://github.com/nathanchapman/vscode-javascript-snippets", "https://github.com/florinpatrascu/vscode-elixir-snippets", "coc-elixir", "coc-docker", "https://github.com/xabikos/vscode-javascript", "coc-svelte"]
 map <leader><leader>cl :CocInstall https://github.com/xabikos/vscode-javascript<CR>
 
 "map Ranger File Tree
