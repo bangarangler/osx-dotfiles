@@ -13,7 +13,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 "Plug 'scrooloose/nerdcommenter'
-" Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-commentary'
 Plug 'tomtom/tcomment_vim'
 Plug 'kabbamine/vcoolor.vim'
 Plug 'ntpeters/vim-better-whitespace'
@@ -24,29 +24,29 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'ervandew/supertab'
 "Plug 'valloric/youcompleteme', { 'do': 'python3 install.py --ts-completer' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'pangloss/vim-javascript'
+"Plug 'pangloss/vim-javascript'
 Plug 'sirver/ultisnips'
-" Plug 'isruslan/vim-es6'
+"Plug 'isruslan/vim-es6'
 Plug 'sheerun/vim-polyglot'
-" Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'maxmellon/vim-jsx-pretty'
 Plug 'tpope/vim-surround'
 "Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/matchit.zip'
 Plug 'jiangmiao/auto-pairs'
 "Plug 'w0rp/ale'
-" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'honza/vim-snippets'
 "Plug 'epilande/vim-es2015-snippets'
 "Plug 'epilande/vim-react-snippets'
 "Plug 'othree/html5.vim', { 'for': 'html'  }
 "Plug 'othree/yajs.vim', { 'for': [ 'javascript', 'javascript.jsx', 'html' ] }
-" Plug 'moll/vim-node', { 'for': 'javascript' }
-" Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] }
-" let g:jsx_ext_required = 0
+"Plug 'moll/vim-node', { 'for': 'javascript' }
+"Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] }
+"let g:jsx_ext_required = 0
 "Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
 "Plug 'groenewege/vim-less', { 'for': 'less' }
 "Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-" Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+"Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'gko/vim-coloresque'
 "Plug 'stephenway/postcss.vim', { 'for': 'css' }
 "Plug 'elzr/vim-json', { 'for': 'json'  }
@@ -60,11 +60,11 @@ Plug 'valloric/matchtagalways'
 			"\ 'javascript.jsx' : 1,
 			"\}
 Plug 'pablopunk/dynamic-file-completion.vim'
-" ranger for vim
-" Plug 'francoiscabrol/ranger.vim'
-" ranger for nvim
+"ranger for vim
+"Plug 'francoiscabrol/ranger.vim'
+"ranger for nvim
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-Plug 'styled-components/vim-styled-components'
+"Plug 'styled-components/vim-styled-components'
 Plug 'tpope/vim-abolish'
 "Plug 'jparise/vim-graphql'
 Plug 'tmhedberg/simpylfold'
