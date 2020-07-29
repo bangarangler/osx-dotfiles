@@ -48,7 +48,8 @@ Plug 'jiangmiao/auto-pairs'
 "Plug 'groenewege/vim-less', { 'for': 'less' }
 "Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 " Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-Plug 'gko/vim-coloresque'
+" Plug 'gko/vim-coloresque'
+Plug 'ap/vim-css-color'
 "Plug 'stephenway/postcss.vim', { 'for': 'css' }
 "Plug 'elzr/vim-json', { 'for': 'json'  }
 "let g:vim_json_syntax_conceal = 0
