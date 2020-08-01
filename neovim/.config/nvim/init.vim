@@ -15,9 +15,6 @@ Plug 'junegunn/fzf.vim'
 " File Explorer ---
 Plug 'scrooloose/nerdtree'
 
-" Visual Improvments ---
-Plug 'ryanoasis/vim-devicons'
-
 " Rainbow Parentheses ---
 Plug 'luochen1990/rainbow'
 
@@ -114,6 +111,12 @@ Plug 'ekalinin/dockerfile.vim'
 " TODO: Tmux Navigation ---
 " Plug 'christoomey/vim-tmux-navigator'
 
+" Startify ---
+Plug 'mhinz/vim-startify'
+
+" Visual Improvments ---
+Plug 'ryanoasis/vim-devicons'
+
 
 " Testing / No longer used"
 "Plug 'ludovicchabant/vim-gutentags'
@@ -156,7 +159,26 @@ call plug#end()
 " Coc Install on Load
 "https://github.com/dsznajder/vscode-es7-javascript-react-snippets"
 
-let g:coc_global_extensions = ["coc-json", "coc-tsserver", "coc-html", "coc-css", "coc-highlight", "coc-emmet", "coc-snippets", "coc-git", "coc-prettier", "https://github.com/xabikos/vscode-react",  "https://github.com/skyran1279/js-jsx-snippets", "https://github.com/nathanchapman/vscode-javascript-snippets", "https://github.com/florinpatrascu/vscode-elixir-snippets", "coc-elixir", "coc-docker", "https://github.com/xabikos/vscode-javascript", "coc-svelte"]
+" let g:coc_global_extensions = [\"coc-json", \"coc-tsserver", \"coc-html", \"coc-css", \"coc-highlight", \"coc-emmet", \"coc-snippets", \"coc-git", \"coc-prettier", \"https://github.com/xabikos/vscode-react",  \"https://github.com/skyran1279/js-jsx-snippets", \"https://github.com/nathanchapman/vscode-javascript-snippets", \"https://github.com/florinpatrascu/vscode-elixir-snippets", \"coc-elixir", \"coc-docker", \"https://github.com/xabikos/vscode-javascript", \"coc-svelte"]
+
+let g:coc_global_extensions = [
+      \ 'coc-json',
+      \ 'coc-tsserver',
+      \ 'coc-html',
+      \ 'coc-css',
+      \ 'coc-highlight',
+      \ 'coc-emmet',
+      \ 'coc-snippets',
+      \ 'coc-git',
+      \ 'coc-prettier',
+      \ 'https://github.com/xabikos/vscode-react',
+      \ 'https://github.com/skyran1279/js-jsx-snippets',
+      \ 'https://github.com/nathanchapman/vscode-javascript-snippets',
+      \ 'https://github.com/florinpatrascu/vscode-elixir-snippets',
+      \ 'coc-elixir',
+      \ 'coc-docker',
+      \ 'https://github.com/xabikos/vscode-javascript',
+      \ 'coc-svelte', ]
 
 " Fails to load sometimes. mapping to install
 map <leader><leader>cl :CocInstall https://github.com/xabikos/vscode-javascript<CR>
@@ -269,10 +291,53 @@ highlight clear endOfBuffer
 nnoremap <C-h> :syntax on <cr>
 nnoremap <C-v> :source ~/.config/nvim/init.vim <cr>
 
+" Startify Config ---
+nnoremap <leader>s :Startify<cr>
+nnoremap <leader>ss :SSave<cr>
+nnoremap <leader>sl :SLoad<cr>
+nnoremap <leader>sd :SDelete<cr>
+
+let g:startify_session_dir = '~/.config/nvim/session'
+let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   Files']            },
+          \ { 'type': 'dir',       'header': ['   Project Dir '. getcwd()] },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ { 'type': 'commands',  'header': ['   Commands']       },
+          \ ]
+
+let g:startify_bookmarks = [ {'n': '~/.config/nvim/init.vim'}, {'v': '~/.vimrc'}, {'z': '~/.zshrc'}, {'d': '~/dotfiles'} ]
+
+let g:startify_update_oldfiles = 1
+let g:startify_session_autoload = 1
+let g:startify_session_persistence = 1
+let g:startify_session_delete_buffers = 1
+let g:startify_change_to_dir = 1
+let g:startify_change_to_vcs_root = 1
+let g:startify_fortune_use_unicode = 1
+
+let g:webdevicons_enable_startify = 1
+let g:startify_custom_header = [
+            \"   d8,       d8b",
+            \"  `8P        88P",
+            \"            d88",
+            \"  d88   d888888  ?88,.d88b,'",
+            \"  ?88  d8P' ?88  `?88'  ?88",
+            \"   88b 88b  ,88b   88b  d8P",
+            \"   `88b`?88P'`88b  888888P''",
+            \"    )88            88P''",
+            \"   ,88P           d88",
+            \"`?888P            ?8P",
+            \ ]
+
+
 "Polyglot enable syntax
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
+
+" Fast Substitution
+nnoremap S :%s///gc<Left><Left><Left><Left>
 
 " Line Numbers
 set number
