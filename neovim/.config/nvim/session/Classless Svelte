@@ -7,24 +7,18 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 src/routes/test-style.svelte
-badd +0 static/customGlobal.css
+badd +40 term://.//26029:ranger\ --choosefiles=/tmp/chosenfile\ --selectfile=\"src/template.html\"
+badd +40 term://.//96539:ranger\ --choosefiles=/tmp/chosenfile\ --selectfile=\"static/customGlobal.css\"
 argglobal
 %argdel
-edit src/routes/test-style.svelte
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 wincmd t
 set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 69 + 69) / 139)
-exe 'vert 2resize ' . ((&columns * 69 + 69) / 139)
 argglobal
+if bufexists("term://.//96539:ranger\ --choosefiles=/tmp/chosenfile\ --selectfile=\"static/customGlobal.css\"") | buffer term://.//96539:ranger\ --choosefiles=/tmp/chosenfile\ --selectfile=\"static/customGlobal.css\" | else | edit term://.//96539:ranger\ --choosefiles=/tmp/chosenfile\ --selectfile=\"static/customGlobal.css\" | endif
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -33,41 +27,18 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=10
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 20) / 40)
+let s:l = 40 - ((39 * winheight(0) + 20) / 40)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+40
 normal! 0
-lcd ~/Desktop/svelteClassless
-wincmd w
-argglobal
-if bufexists("~/Desktop/svelteClassless/static/customGlobal.css") | buffer ~/Desktop/svelteClassless/static/customGlobal.css | else | edit ~/Desktop/svelteClassless/static/customGlobal.css | endif
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=10
-setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 20) / 40)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd ~/Desktop/svelteClassless
-wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 69 + 69) / 139)
-exe 'vert 2resize ' . ((&columns * 69 + 69) / 139)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
-set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFcI
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFIc
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)

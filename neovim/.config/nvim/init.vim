@@ -340,7 +340,7 @@ let g:javascript_plugin_flow = 1
 nnoremap S :%s///gc<Left><Left><Left><Left>
 
 " Line Numbers
-set number
+set relativenumber
 
 function! LineNumberToggle()
   if(&relativenumber == 1)
