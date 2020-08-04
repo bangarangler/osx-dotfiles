@@ -108,7 +108,7 @@ Plug 'davidhalter/jedi-vim'
 " Docker ---
 Plug 'ekalinin/dockerfile.vim'
 
-" TODO: Tmux Navigation ---
+"  Tmux Navigation ---
 " Plug 'christoomey/vim-tmux-navigator'
 
 " Startify ---
@@ -156,11 +156,10 @@ Plug 'ryanoasis/vim-devicons'
 "Plug 'styled-components/vim-styled-components'
 call plug#end()
 
+" set leader key to \
+let mapleader="\\"
+
 " Coc Install on Load
-"https://github.com/dsznajder/vscode-es7-javascript-react-snippets"
-
-" let g:coc_global_extensions = [\"coc-json", \"coc-tsserver", \"coc-html", \"coc-css", \"coc-highlight", \"coc-emmet", \"coc-snippets", \"coc-git", \"coc-prettier", \"https://github.com/xabikos/vscode-react",  \"https://github.com/skyran1279/js-jsx-snippets", \"https://github.com/nathanchapman/vscode-javascript-snippets", \"https://github.com/florinpatrascu/vscode-elixir-snippets", \"coc-elixir", \"coc-docker", \"https://github.com/xabikos/vscode-javascript", \"coc-svelte"]
-
 let g:coc_global_extensions = [
       \ 'coc-json',
       \ 'coc-tsserver',
@@ -286,7 +285,7 @@ highlight clear endOfBuffer
 " highlight clear SignColumn
 " highlight clear LineNr
 
-" TODO: hack work around for css highlighting.  use Ctrl h, and then run Ctrl v. fixes
+"  hack work around for css highlighting.  use Ctrl h, and then run Ctrl v. fixes
 " highlighting and reverts colors back to how they should be
 nnoremap <C-h> :syntax on <cr>
 nnoremap <C-v> :source ~/.config/nvim/init.vim <cr>
@@ -372,12 +371,8 @@ set visualbell
 "set t_vb=
 "set tm=500
 
-" TODO: clear results after search space ctrl l
+" clear results after search space ctrl l
 nnoremap <C-L> :noh<CR><C-L>
-
-
-" set leader key to \
-let mapleader="\\"
 
 "re-map esc to jk
 inoremap jk <esc>
@@ -638,18 +633,18 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " PYTHON SETTINGS
 " PEP 8 indentation here
-" au BufNewFile,BufRead *.py
-"     \ set tabstop=4
-"     \ set softtabstop=4
-"     \ set shiftwidth=4
-"     \ set textwidth=79
-"     \ set expandtab
-"     \ set autoindent
-"     \ set fileformat=unix
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 textwidth=79
-"autocmd FileType puthon setlocal expandtab autoindent fileformat=unix
+autocmd FileType puthon setlocal expandtab autoindent fileformat=unix
 "Flag unnecessary WhiteSpace
-"au BufNewFile,BufRead *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufNewFile,BufRead *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 
 " UTF-8 Support
