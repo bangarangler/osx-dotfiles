@@ -102,8 +102,8 @@ Plug 'jparise/vim-graphql'
 " Python ---
 Plug 'tmhedberg/simpylfold'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'nvie/vim-flake8'
-Plug 'davidhalter/jedi-vim'
+" Plug 'nvie/vim-flake8'
+" Plug 'davidhalter/jedi-vim'
 
 " Docker ---
 Plug 'ekalinin/dockerfile.vim'
@@ -159,6 +159,12 @@ call plug#end()
 " set leader key to \
 let mapleader="\\"
 
+" TODO: fix nvim working inside python project
+" both of the below options work. this only seems required for mac. I don't have
+" this problem on linux
+" let g:python_host_prog='/usr/bin/python'
+let g:python3_host_prog = '/Users/jonathanpalacio/.pyenv/versions/3.7.3/bin/python'
+
 " Coc Install on Load
 let g:coc_global_extensions = [
       \ 'coc-json',
@@ -177,7 +183,9 @@ let g:coc_global_extensions = [
       \ 'coc-elixir',
       \ 'coc-docker',
       \ 'https://github.com/xabikos/vscode-javascript',
-      \ 'coc-svelte', ]
+      \ 'coc-svelte',
+      \ 'coc-pyright',
+      \ 'coc-python', ]
 
 " Fails to load sometimes. mapping to install
 map <leader><leader>cl :CocInstall https://github.com/xabikos/vscode-javascript<CR>
@@ -633,7 +641,7 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " PYTHON SETTINGS
 " PEP 8 indentation here
-au BufNewFile,BufRead *.py
+au BufNewFile, BufRead *.py
     \ set tabstop=4
     \ set softtabstop=4
     \ set shiftwidth=4
@@ -644,7 +652,7 @@ au BufNewFile,BufRead *.py
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 textwidth=79
 autocmd FileType puthon setlocal expandtab autoindent fileformat=unix
 "Flag unnecessary WhiteSpace
-au BufNewFile,BufRead *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" au BufNewFile, BufRead *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 
 " UTF-8 Support
@@ -652,7 +660,6 @@ set encoding=utf-8
 
 " C ********
 map <F8> :!gcc % -Wall -Wextra -o %< && ./%< <CR>
-
 
 " Not Needed for Nvim
 " matchit.vim

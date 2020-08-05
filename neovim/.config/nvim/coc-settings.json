@@ -1,13 +1,29 @@
 {
+  "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "html",
+    "css",
     "javascript",
+    "javascriptreact",
+    "graphql",
+    "json",
+    "jsonc",
+    "jsonb",
+    "markdown",
     "typescript",
     "typescriptreact",
-    "json",
-    "javascriptreact",
     "typescript.tsx",
-    "svelte"
+    "go",
+    "svelte",
+    "python",
+    "elixir"
   ],
+  "prettier.bracketSpacing": true,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.singleQuote": false,
+  "python.linting.pylintEnabled": false,
+  "python.linting.pep8Enabled": true,
+  "python.linting.enabled": true,
   "diagnostic.infoSign": "ღ",
   "diagnostic.hintSign": "ஐ",
   "diagnostic.warningSign": "⚠",
@@ -43,5 +59,7 @@
     "typeParameter": "\uf728",
     "default": "\uf29c"
   },
-  "python.pythonPath": "python"
+  "suggest.echodocSupport": true,
+  "signature.enable": true,
+  "python.jediEnabled": false
 }
