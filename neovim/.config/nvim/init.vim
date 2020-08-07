@@ -164,6 +164,7 @@ let mapleader="\\"
 " this problem on linux
 " let g:python_host_prog='/usr/bin/python'
 let g:python3_host_prog = '/Users/jonathanpalacio/.pyenv/versions/3.7.3/bin/python'
+let g:python_host_prog = '/Users/jonathanpalacio/.pyenv/versions/2.7.0/bin/python'
 
 " Coc Install on Load
 let g:coc_global_extensions = [

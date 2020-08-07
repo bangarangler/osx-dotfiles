@@ -203,6 +203,8 @@ source $ZSH/oh-my-zsh.sh
 bindkey -v
 
 
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
