@@ -261,6 +261,12 @@ set foldlevel=1
 " map to fold
 nnoremap <space> za
 
+" Nvim Terminal Mappings ---
+if has('nvim')
+  tnoremap jk <C-\><C-n>
+  tnoremap <C-v><Esc> <Esc>
+endif
+
 " Color Scheme
 " let g:dracula_italic = 0
 " colorscheme dracula
