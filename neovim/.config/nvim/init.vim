@@ -278,6 +278,8 @@ set background=dark
 highlight clear SignColumn
 highlight clear LineNr
 highlight clear endOfBuffer
+" only needed if using alacritty
+hi Normal ctermbg=NONE guibg=NONE
 
 " OneDark
 " colorscheme onedark
