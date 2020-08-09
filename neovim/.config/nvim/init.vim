@@ -159,6 +159,7 @@ call plug#end()
 " set leader key to \
 let mapleader="\\"
 
+
 " TODO: fix nvim working inside python project
 " both of the below options work. this only seems required for mac. I don't have
 " this problem on linux
@@ -273,13 +274,16 @@ endif
 " highlight Normal ctermbg=None
 
 " Ariake Dark
+" set termguicolors
 colorscheme Ariake-Dark
 set background=dark
 highlight clear SignColumn
 highlight clear LineNr
 highlight clear endOfBuffer
 " only needed if using alacritty
+" maybe not fixes merky bg in iterm2 on mac
 hi Normal ctermbg=NONE guibg=NONE
+" highlight Comment cterm=italic gui=italic
 
 " OneDark
 " colorscheme onedark
