@@ -48,3 +48,4 @@ windows:
         - neofetch
         - top
         - htop
+        - ytop

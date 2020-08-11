@@ -45,6 +45,12 @@ Plug 'jonathanfilip/vim-lucius'
 " COC ---
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Vim Floaterm
+Plug 'voldikss/vim-floaterm'
+
+" Vim Which Key
+Plug 'liuchengxu/vim-which-key'
+
 " Snippets ---
 "Plug 'sirver/ultisnips'
 
@@ -355,6 +361,99 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
+" Map leader to which_key
+" nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
+" vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+
+" Create map to add keys to
+let g:which_key_map =  {}
+" Define a separator
+let g:which_key_sep = '→'
+" set timeoutlen=100
+
+
+" Not a fan of floating windows for this
+let g:which_key_use_floating_win = 0
+
+" Change the colors if you want
+highlight default link WhichKey          Operator
+highlight default link WhichKeySeperator DiffAdded
+highlight default link WhichKeyGroup     Identifier
+highlight default link WhichKeyDesc      Function
+
+" Hide status line
+autocmd! FileType which_key
+autocmd  FileType which_key set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
+
+" Single mappings
+let g:which_key_map['e'] = [ ':CocCommand explorer --preset floating'       , 'explorer' ]
+let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
+let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
+let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
+let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
+let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
+
+" s is for search
+let g:which_key_map.w = {
+      \ 'name' : '+search' ,
+      \ '/' : [':History/'     , 'history'],
+      \ ';' : [':Commands'     , 'commands'],
+      \ 'a' : [':Ag'           , 'text Ag'],
+      \ 'b' : [':BLines'       , 'current buffer'],
+      \ 'B' : [':Buffers'      , 'open buffers'],
+      \ 'c' : [':Commits'      , 'commits'],
+      \ 'C' : [':BCommits'     , 'buffer commits'],
+      \ 'f' : [':Files'        , 'files'],
+      \ 'g' : [':GFiles'       , 'git files'],
+      \ 'G' : [':GFiles?'      , 'modified git files'],
+      \ 'h' : [':History'      , 'file history'],
+      \ 'H' : [':History:'     , 'command history'],
+      \ 'l' : [':Lines'        , 'lines'] ,
+      \ 'm' : [':Marks'        , 'marks'] ,
+      \ 'M' : [':Maps'         , 'normal maps'] ,
+      \ 'p' : [':Helptags'     , 'help tags'] ,
+      \ 'P' : [':Tags'         , 'project tags'],
+      \ 's' : [':Snippets'     , 'snippets'],
+      \ 'S' : [':Colors'       , 'color schemes'],
+      \ 't' : [':Rg'           , 'text Rg'],
+      \ 'T' : [':BTags'        , 'buffer tags'],
+      \ 'w' : [':Windows'      , 'search windows'],
+      \ 'y' : [':Filetypes'    , 'file types'],
+      \ 'z' : [':FZF'          , 'FZF'],
+      \ }
+
+" Register which key map
+call which_key#register('<Space>', "g:which_key_map")
+
+let g:floaterm_keymap_toggle = '<F1>'
+let g:floaterm_keymap_next   = '<F2>'
+let g:floaterm_keymap_prev   = '<F3>'
+let g:floaterm_keymap_new    = '<F4>'
+
+" Floaterm
+let g:floaterm_gitcommit='floaterm'
+let g:floaterm_autoinsert=1
+let g:floaterm_width=0.8
+let g:floaterm_height=0.8
+let g:floaterm_wintitle=0
+let g:floaterm_autoclose=1
+
+let g:which_key_map.t = {
+      \ 'name' : '+terminal' ,
+      \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
+      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'n' : [':FloatermNew node'                              , 'node'],
+      \ 'p' : [':FloatermNew python'                            , 'python'],
+      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
+      \ }
+
 " Fast Substitution
 nnoremap S :%s///gc<Left><Left><Left><Left>
 
@@ -504,7 +603,7 @@ nnoremap <leader>ig :IndentGuidesToggle<CR>
 "             \ {},
 "             \ {'width': 0.700, 'height': 0.700},
 "             \ {'width': 0.800, 'height': 0.800},
-"             \ {'width': 0.950, 'height': 0.950}
+"             \ {'width': 0.950, 'height': 0.950},
 "             \ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0},
 "             \ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0.5},
 "             \ {'width': 0.500, 'height': 0.500, 'col': 0.5, 'row': 0},
