@@ -160,12 +160,10 @@ call plug#end()
 let mapleader="\\"
 
 
-" TODO: fix nvim working inside python project
-" both of the below options work. this only seems required for mac. I don't have
-" this problem on linux
-" let g:python_host_prog='/usr/bin/python'
+" make nvim work inside python env
 let g:python3_host_prog = '/Users/jonathanpalacio/.pyenv/versions/3.7.3/bin/python'
 let g:python_host_prog = '/Users/jonathanpalacio/.pyenv/versions/2.7.0/bin/python'
+
 
 " Coc Install on Load
 let g:coc_global_extensions = [
@@ -187,7 +185,8 @@ let g:coc_global_extensions = [
       \ 'https://github.com/xabikos/vscode-javascript',
       \ 'coc-svelte',
       \ 'coc-pyright',
-      \ 'coc-python', ]
+      \ 'coc-python',
+      \ 'coc-explorer', ]
 
 " Fails to load sometimes. mapping to install
 map <leader><leader>cl :CocInstall https://github.com/xabikos/vscode-javascript<CR>
@@ -365,6 +364,7 @@ set relativenumber
 function! LineNumberToggle()
   if(&relativenumber == 1)
     set norelativenumber
+    set number
   else
     set relativenumber
   endif
@@ -581,12 +581,12 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 let g:fzf_buffers_jump = 1
-let g:fzf_tags_command = 'ctags -R'
+" let g:fzf_tags_command = 'ctags -R'
 "default :buffers
 nmap <Leader>b :buffers<CR>
 "FZF :Buffers
 nmap <Leader>b :Buffers<CR>
-nmap <Leader>n :files<CR>
+" nmap <Leader>n :files<CR>
 nmap <Leader>m :bufdo! bw<CR>
 nmap <Leader>ju :jumps<CR>
 nnoremap <Leader>t :Tags<CR>
@@ -832,6 +832,47 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+"
+" Coc-Explorer Settings --
+let g:coc_explorer_global_presets = {
+\   '.vim': {
+\     'root-uri': '~/.vim',
+\   },
+\   'tab': {
+\     'position': 'tab',
+\     'quit-on-open': v:true,
+\   },
+\   'floating': {
+\     'position': 'floating',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingTop': {
+\     'position': 'floating',
+\     'floating-position': 'center-top',
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingLeftside': {
+\     'position': 'floating',
+\     'floating-position': 'left-center',
+\     'floating-width': 30,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'floatingRightside': {
+\     'position': 'floating',
+\     'floating-position': 'right-center',
+\     'floating-width': 30,
+\     'open-action-strategy': 'sourceWindow',
+\   },
+\   'simplify': {
+\     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   }
+\ }
+
+" nmap <leader>ed :CocCommand explorer --preset .vim<CR>
+" nmap <leader>ef :CocCommand explorer --preset floating<CR>
+nmap <leader>n :CocCommand explorer --preset .vim<CR>
+nmap <leader>nf :CocCommand explorer --preset floating<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 
 "SNIPPETS

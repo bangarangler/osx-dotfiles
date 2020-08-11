@@ -17,7 +17,7 @@ ZSH_THEME="dracula-pro"
 # ORDER
 SPACESHIP_PROMPT_ORDER=(
   time     #
-  vi_mode  # these sections will be
+  vi_mode  #
   user     # before prompt char
   host     #
   char
@@ -167,7 +167,7 @@ SPACESHIP_DIR_TRUNC='1' # show only last directory
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-nvm git z zsh-syntax-highlighting)
+plugins=(zsh-nvm git z zsh-syntax-highlighting zsh-autosuggestions)
 
 #~/z.sh
 source $ZSH/oh-my-zsh.sh

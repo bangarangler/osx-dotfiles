@@ -36,7 +36,6 @@
 
   "suggest.floatEnable": false,
   "suggest.timeout": 5000,
-  "suggest.maxCompleteItemCount": 3,
   "suggest.localityBonus": true,
   "diagnostic.infoSign": "ღ",
   "diagnostic.hintSign": "ஐ",
@@ -74,5 +73,8 @@
   },
   "suggest.echodocSupport": true,
   "signature.enable": true,
-  "python.jediEnabled": false
+  "python.jediEnabled": false,
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false
 }
