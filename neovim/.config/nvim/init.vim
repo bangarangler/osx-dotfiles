@@ -7,6 +7,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'idanarye/vim-merginal'
+Plug 'jreybert/vimagit'
 
 " FZF ---
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -87,9 +88,11 @@ Plug 'pablopunk/dynamic-file-completion.vim'
 
 " Nvim Ranger ---
 " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+Plug 'kevinhwang91/rnvimr'
 
 " Vim/MacOS Ranger ---
-Plug 'francoiscabrol/ranger.vim'
+" Plug 'francoiscabrol/ranger.vim'
+" Plug 'rbgrouleff/bclose.vim'
 
 " Substitute, Search, abbriveate multiple variants of a word
 Plug 'tpope/vim-abolish/'
@@ -362,8 +365,8 @@ let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
 " Map leader to which_key
-" nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
-" vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
@@ -391,7 +394,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['e'] = [ ':CocCommand explorer --preset floating'       , 'explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
-let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
+let g:which_key_map['r'] = [ ':RnvimrToggle'                    , 'ranger' ]
 let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
 let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
@@ -426,7 +429,7 @@ let g:which_key_map.w = {
       \ }
 
 " Register which key map
-call which_key#register('<Space>', "g:which_key_map")
+call which_key#register('<space>', "g:which_key_map")
 
 let g:floaterm_keymap_toggle = '<F1>'
 let g:floaterm_keymap_next   = '<F2>'
@@ -453,6 +456,9 @@ let g:which_key_map.t = {
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
       \ }
+
+" vimagit settings ---
+nnoremap <leader>g :Magit<CR>
 
 " Fast Substitution
 nnoremap S :%s///gc<Left><Left><Left><Left>
@@ -558,7 +564,7 @@ nnoremap <leader>ig :IndentGuidesToggle<CR>
 
 " Ranger nvim Config ---
 " Make Ranger replace netrw and be the file explorer
-" let g:rnvimr_ex_enable = 1
+let g:rnvimr_ex_enable = 1
 
 " Make Ranger to be hidden after picking a file
 " let g:rnvimr_pick_enable = 1
@@ -577,7 +583,7 @@ nnoremap <leader>ig :IndentGuidesToggle<CR>
 " highlight NormalFloat ctermfg=0 ctermbg=16 guibg=#2b3038
 
 " nnoremap <silent> <M-o> :RnvimrToggle<CR>
-" map <leader>r :RnvimrToggle<CR>
+map <leader>r :RnvimrToggle<CR>
 " tnoremap <silent> <M-o> <C-\><C-n>:RnvimrToggle<CR>
 
 " Resize floating window by all preset layouts
@@ -615,8 +621,8 @@ nnoremap <leader>ig :IndentGuidesToggle<CR>
 
 
 " map Ranger File Tree Above having mac issues
-let g:ranger_map_keys = 0
-map <leader>r :Ranger<CR>
+" let g:ranger_map_keys = 0
+" map <leader>r :Ranger<CR>
 "Ranger // open current file by default
 "RangerCurrentFile // Default Ranger behaviour
 "RangerCurrentDirectory
