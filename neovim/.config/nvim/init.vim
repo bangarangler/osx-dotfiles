@@ -170,8 +170,14 @@ let mapleader="\\"
 
 
 " make nvim work inside python env
-let g:python3_host_prog = '/Users/jonathanpalacio/.pyenv/versions/3.7.3/bin/python'
-let g:python_host_prog = '/Users/jonathanpalacio/.pyenv/versions/2.7.0/bin/python'
+" let g:python3_host_prog = '/Users/jonathanpalacio/.pyenv/versions/3.7.3/bin/python'
+" let g:python_host_prog = '/Users/jonathanpalacio/.pyenv/versions/2.7.0/bin/python'
+if has("nvim")
+  let g:python3_host_prog = '/Users/jonathanpalacio/.pyenv/versions/neovim3/bin'
+  let g:python_host_prog = '/Users/jonathanpalacio/.pyenv/versions/neovim2/bin'
+  let g:python3_host_prog = '/Users/jonathanpalacio/.pyenv/versions/neovim3/bin/python'
+  let g:python_host_prog = '/Users/jonathanpalacio/.pyenv/versions/neovim2/bin/python'
+endif
 
 
 " Coc Install on Load
