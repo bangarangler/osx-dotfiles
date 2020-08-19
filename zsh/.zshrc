@@ -312,6 +312,12 @@ function stowrestore() {
   ../dotfiles/stowrestore
 }
 
+function startday() {
+  ~/dotfiles/
+  ../dotfiles/start_day.py
+  cd -
+}
+
 # // trying to get openssl to work on new osx delete this later
 # export CFLAGS="-I$(brew --prefix openssl)/include" \
 # export LDFLAGS="-L$(brew --prefix openssl)/lib" \
