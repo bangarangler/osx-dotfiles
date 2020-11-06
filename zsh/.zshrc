@@ -171,6 +171,7 @@ plugins=(zsh-nvm git z zsh-syntax-highlighting zsh-autosuggestions)
 
 #~/z.sh
 source $ZSH/oh-my-zsh.sh
+source /Users/jonathanpalacio/dotfiles/zsh/.env
 
 # User configuration
 
@@ -273,6 +274,8 @@ alias dfiles="tmuxinator df"
 
 alias pcstatus="tmuxinator pcstatus"
 
+alias workProd="tmuxinator workProd"
+
 alias bangProj='tmuxinator bangProj'
 
 alias fuck='sudo !!'
@@ -281,8 +284,16 @@ alias update='brew update && brew upgrade && brew cask upgrade && brew cleanup'
 
 alias dc="docker container"
 
-
-# alias mmaster='git checkout master; git pull; git merge development; git push; git checkout development'
+# WORK
+alias prod="sshpass -p ${PROD_PW} ssh ${PROD_USER}"
+alias peg="sshpass -p ${PEGASUS_PW} ssh ${PEGASUS_USER}"
+alias cerb="sshpass -p ${CERBERUS_PW} ssh ${CERBERUS_USER}"
+alias nrt="sshpass -p ${NRT_PW} ssh ${NRT_USER}"
+alias hyd="sshpass -p ${HYDRA_PW} ssh ${HYDRA_USER}"
+alias ods="sshpass -p ${ORION_DEV_PW} ssh ${ORION_DEV_USER}"
+alias v1s="sshpass -p ${V1_PW} ssh ${V1_USER}"
+alias aris="sshpass -p ${ARIS_PW} ssh ${ARIS_USER}"
+alias nowwp="sshpass -p ${NOW_WP_PW} ssh ${NOW_WP_USER}"
 
 eval "$(rbenv init -)"
 
