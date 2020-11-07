@@ -1,7 +1,7 @@
 # /Users/jonathanpalacio/.config/tmuxinator/workFE.yml
 
 name: workFE
-root: ~/Desktop/Nowigence/pluaris
+root: ~/Desktop/Nowigence/pluaris-prod
 
 # Optional tmux socket
 # socket_name: foo

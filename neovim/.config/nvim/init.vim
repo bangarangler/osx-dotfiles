@@ -8,7 +8,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'idanarye/vim-merginal'
 Plug 'jreybert/vimagit'
-" Testing ---***
 Plug 'stsewd/fzf-checkout.vim'
 
 " FZF ---
@@ -815,7 +814,7 @@ map <leader>vf :Vista finder coc<CR>
 " Press ctrl-d to delete a branch
 let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
 let $FZF_DEFAULT_OPTS='--reverse'
-nnoremap <leader>gc :GCheckout<CR>
+nnoremap <leader>gc :GBranches<CR>
 
 " Coc Settings
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
