@@ -128,6 +128,9 @@ Plug 'mhinz/vim-startify'
 " Visual Improvments ---
 Plug 'ryanoasis/vim-devicons'
 
+" Vimspector
+" Plug 'puremourning/vimspector', {'do': './install_gadget.py'}
+Plug 'puremourning/vimspector'
 
 " Testing / No longer used"
 "Plug 'ludovicchabant/vim-gutentags'
@@ -736,6 +739,21 @@ let g:vcoolor_lowercase = 1
 let g:vcoolor_disable_mappings = 1
 let g:vcoolor_map = '<leader>c'
 
+" Debugger Mappings
+nnoremap <leader>dd :call vimspector#Launch()<CR>
+nnoremap <leader>de :call vimspector#Reset()<CR>
+
+nnoremap <leader>dtcb :call vimspector#CleanLineBreakpoint()<CR>
+
+nmap <leader>dl <Plug>VimspectorStepInto
+nmap <leader>dj <Plug>VimspectorStepOver
+nmap <leader>dk <Plug>VimspectorStepOut
+nmap <leader>d_ <Plug>VimspectorRestart
+nnoremap <leader>d<space> :call vimspector#Continue()<CR>
+
+nmap <leader>drc <Plug>VimspectorRunToCursor
+nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
+nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
 
 " Line Movement
 " move lines up or dowwn
