@@ -112,6 +112,7 @@ Plug 'jparise/vim-graphql'
 " Python ---
 Plug 'tmhedberg/simpylfold'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'psf/black', { 'branch': 'stable' }
 " Plug 'nvie/vim-flake8'
 " Plug 'davidhalter/jedi-vim'
 
@@ -784,6 +785,11 @@ au BufNewFile, BufRead *.py
     \ set fileformat=unix
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 textwidth=79
 autocmd FileType puthon setlocal expandtab autoindent fileformat=unix
+autocmd BufWritePre *.py execute ':Black'
+let g:black_fast = 0 "(defaults to 0)
+let g:black_linelength = 79 "(defaults to 88)
+let g:black_skip_string_normalization = 0 "(defaults to 0)
+" let g:black_virtualenv = ~/ "(defaults to ~/.vim/black or ~/.local/share/nvim/black)
 "Flag unnecessary WhiteSpace
 " au BufNewFile, BufRead *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 

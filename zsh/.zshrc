@@ -280,7 +280,7 @@ alias bangProj='tmuxinator bangProj'
 
 alias fuck='sudo !!'
 
-alias update='brew update && brew upgrade && brew cask upgrade && brew cleanup'
+alias update='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
 
 alias dc="docker container"
 
