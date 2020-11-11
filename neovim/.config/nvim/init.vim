@@ -204,6 +204,7 @@ let g:coc_global_extensions = [
       \ 'coc-docker',
       \ 'https://github.com/xabikos/vscode-javascript',
       \ 'coc-svelte',
+      \ 'coc-graphql',
       \ 'coc-pyright',
       \ 'coc-python',
       \ 'coc-explorer', ]
