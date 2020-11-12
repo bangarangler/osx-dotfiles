@@ -76,5 +76,15 @@
   "python.jediEnabled": false,
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false
+  "explorer.previewAction.onHover": false,
+  "graphql.debug": true,
+  "graphql.filetypes": [
+    "graphql",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "reason"
+  ],
+  "graphql.watcherPattern": "**/*.{graphql,gql,js,jsx,ts,tsx,re}"
 }
