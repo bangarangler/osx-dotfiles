@@ -203,6 +203,8 @@ let g:coc_global_extensions = [
       \ 'coc-elixir',
       \ 'coc-docker',
       \ 'https://github.com/xabikos/vscode-javascript',
+      \ 'https://github.com/infeng/vscode-react-typescript',
+      \ 'https://github.com/softchris/ts-snippets',
       \ 'coc-svelte',
       \ 'coc-graphql',
       \ 'coc-yaml',
