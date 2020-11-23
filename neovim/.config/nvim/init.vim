@@ -108,6 +108,8 @@ Plug 'ap/vim-css-color'
 " GraphQL ---
 Plug 'jparise/vim-graphql'
 
+" Vim-Peekaboo ---
+Plug 'junegunn/vim-peekaboo'
 
 " Python ---
 Plug 'tmhedberg/simpylfold'
