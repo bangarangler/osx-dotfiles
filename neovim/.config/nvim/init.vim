@@ -1,3 +1,16 @@
+" VSCODE NVIM YUCK -> better but still not vim
+if exists('g:vscode')
+nnoremap <silent> <Space> :call VSCodeNotify('whichkey.show')<CR>
+xnoremap <silent> <Space> :<C-u>call <SID>openWhichKeyInVisualMode()<CR>
+xnoremap <silent> <C-P> :<C-u>call <SID>openVSCodeCommandsInVisualMode()<CR>
+call plug#begin()
+Plug 'ChristianChiarulli/vscode-easymotion'
+Plug 'machakann/vim-highlightedyank'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-surround'
+call plug#end()
+else
+
 " vim-plug ---
 call plug#begin()
 " Viewer and Finder for LSP symbols and tags
@@ -1021,6 +1034,7 @@ nmap <leader>n :CocCommand explorer --preset .vim<CR>
 nmap <leader>nf :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
+endif
 
 "SNIPPETS
 "nfn const fn = (params) => {}
