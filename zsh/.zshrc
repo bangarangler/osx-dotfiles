@@ -284,6 +284,8 @@ alias update='brew update && brew upgrade && brew upgrade --cask && brew cleanup
 
 alias dc="docker container"
 
+alias insiders='code-insiders'
+
 # WORK
 alias prod="sshpass -p ${PROD_PW} ssh ${PROD_USER}"
 alias peg="sshpass -p ${PEGASUS_PW} ssh ${PEGASUS_USER}"
