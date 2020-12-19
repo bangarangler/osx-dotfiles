@@ -220,9 +220,22 @@ export PATH=$PATH:/Users/jonathanpalacio/Library/Android/sdk/platform-tools/
 export PATH="/usr/local/bin:$PATH"
 
 
-alias config='/usr/bin/git --git-dir=/Users/jonathanpalacio/.cfg/ --work-tree=/Users/jonathanpalacio'
-alias ls=colorls —-sd
+# TO BE DELETED
+# alias config='/usr/bin/git --git-dir=/Users/jonathanpalacio/.cfg/ --work-tree=/Users/jonathanpalacio'
 
+#PYTHON
+#alias 2='python2'
+#alias 3='python3'
+# alias python='python3'
+
+#date | lolcat
+#lolcat /Users/jonathanpalacio/Desktop/dev/ascii/skull.txt
+#figlet -f whimsy Dain! | lolcat
+#cal | lolcat
+export BAT_THEME=GitHub
+
+# FUN
+alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 alias skeleton='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/skull.txt'
 alias casper='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/casper-evil.txt'
 alias succubus='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/succubus.txt'
@@ -239,52 +252,50 @@ alias gyarados='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/gyarados.txt'
 alias eevee='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/eevee.txt'
 alias dragonite='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/dragonite.txt'
 alias lady='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/lady.txt'
-
-#PYTHON
-#alias 2='python2'
-#alias 3='python3'
-# alias python='python3'
-
-#date | lolcat
-#lolcat /Users/jonathanpalacio/Desktop/dev/ascii/skull.txt
-#figlet -f whimsy Dain! | lolcat
-#cal | lolcat
-export BAT_THEME=GitHub
-
-alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
+#
 #POSTGRES
 alias pg_start="pg_ctl -D /usr/local/var/postgres start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop"
 
-alias ctags="`brew --prefix`/bin/ctags"
-
-alias yabaistart='brew services start koekeishiya/formulae/yabai && brew services start skhd'
-
-alias yabaistop='brew services stop koekeishiya/formulae/yabai && brew services stop skhd'
-
-alias iconsoff='defaults write com.apple.finder CreateDesktop -bool false;killall Finder;say icons hidden'
-
-alias iconson='defaults write com.apple.finder CreateDesktop -bool true;killall Finder;say icons visible'
-
+# TMUXINATOR ALIASES
 alias workFE="tmuxinator workFE"
-
 alias workBE="tmuxinator workBE"
-
 alias dfiles="tmuxinator df"
-
 alias pcstatus="tmuxinator pcstatus"
-
 alias workProd="tmuxinator workProd"
-
 alias bangProj='tmuxinator bangProj'
 
-alias fuck='sudo !!'
 
+# SYSTEM OSX
+alias c="clear"
 alias update='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
+# alias fuck='sudo !!'
+alias fuck='sudo $(fc -ln -1)'
+alias ls=colorls —-sd
+alias yabaistart='brew services start koekeishiya/formulae/yabai && brew services start skhd'
+alias yabaistop='brew services stop koekeishiya/formulae/yabai && brew services stop skhd'
+alias iconsoff='defaults write com.apple.finder CreateDesktop -bool false;killall Finder;say icons hidden'
+alias iconson='defaults write com.apple.finder CreateDesktop -bool true;killall Finder;say icons visible'
+alias ctags="`brew --prefix`/bin/ctags"
 
+# DOCKER
 alias dc="docker container"
 
+# EXPERIMENTAL
 alias insiders='code-insiders'
+
+# TMUX
+alias t="tmux"
+# Attach to any (i don't care once inside can got to any with prefix+w)
+alias taa="t a"
+# Attach to named session (ta df) will attach to dotfiles
+alias ta="t a -t"
+# Short cut for tmux new -s <session-name>
+alias tn="t new -s"
+# Short cut for tmux kill-session
+alias tk="t kill-session"
+# Short cut for tmux kill-server
+alias tka="t kill-server"
 
 # WORK
 alias prod="sshpass -p ${PROD_PW} ssh ${PROD_USER}"
