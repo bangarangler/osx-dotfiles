@@ -279,7 +279,15 @@ alias iconson='defaults write com.apple.finder CreateDesktop -bool true;killall 
 alias ctags="`brew --prefix`/bin/ctags"
 
 # DOCKER
-alias dc="docker container"
+alias d="docker"
+alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
+alias dcd="docker-compose down"
+alias dps="d ps"
+alias dpsa="d ps -a"
+alias dils="d image ls"
+alias dcls="d container ls"
+alias dl="d logs"
 
 # EXPERIMENTAL
 alias insiders='code-insiders'
