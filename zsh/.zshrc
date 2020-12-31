@@ -293,6 +293,15 @@ alias dils="d image ls"
 alias dcls="d container ls"
 alias dl="d logs"
 
+# KUBERNETES ALIASES
+alias kgp="kubectl get pods"
+alias kgd="kubectl get deployments"
+alias kgs="kubectl get services"
+alias kgsc="kubectl get sc"
+alias kgpv="kubectl get pv"
+alias kgpvc="kubectl get pvc"
+alias kgcm="kubectl get configmap"
+
 # EXPERIMENTAL
 alias insiders='code-insiders'
 
