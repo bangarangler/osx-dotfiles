@@ -301,6 +301,7 @@ alias kgsc="kubectl get sc"
 alias kgpv="kubectl get pv"
 alias kgpvc="kubectl get pvc"
 alias kgcm="kubectl get configmap"
+alias kgns="kubectl get namespaces"
 
 # EXPERIMENTAL
 alias insiders='code-insiders'
