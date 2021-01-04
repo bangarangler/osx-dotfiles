@@ -225,6 +225,7 @@ let g:coc_global_extensions = [
       \ 'coc-yaml',
       \ 'coc-pyright',
       \ 'coc-python',
+      \ 'coc-go',
       \ 'coc-explorer', ]
 
 " Fails to load sometimes. mapping to install
