@@ -308,21 +308,21 @@ if has('nvim')
 endif
 
 " Color Scheme
-" let g:dracula_italic = 0
-" colorscheme dracula
-" highlight Normal ctermbg=None
+let g:dracula_italic = 0
+colorscheme dracula
+highlight Normal ctermbg=None
 
 " Ariake Dark
-" set termguicolors
-colorscheme Ariake-Dark
-set background=dark
-highlight clear SignColumn
-highlight clear LineNr
-highlight clear endOfBuffer
+"set termguicolors " leave this line out unless running into issues
+" colorscheme Ariake-Dark "in
+" set background=dark "in
+" highlight clear SignColumn "in
+" highlight clear LineNr "in
+" highlight clear endOfBuffer "in
 " only needed if using alacritty
 " maybe not fixes merky bg in iterm2 on mac
-hi Normal ctermbg=NONE guibg=NONE
-" highlight Comment cterm=italic gui=italic
+" hi Normal ctermbg=NONE guibg=NONE " in
+" highlight Comment cterm=italic gui=italic " out
 
 " OneDark
 " colorscheme onedark
