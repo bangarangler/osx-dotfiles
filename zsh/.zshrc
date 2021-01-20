@@ -24,6 +24,7 @@ SPACESHIP_PROMPT_ORDER=(
   dir
   git
   node
+  # kubectl
   ruby
   xcode
   swift
@@ -108,6 +109,17 @@ SPACESHIP_DIR_TRUNC='1' # show only last directory
 #SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=”true”
 #SPACESHIP_USER_SHOW=”true”
 
+#KUBERNETES
+# SPACESHIP_KUBECTL_SHOW=true
+# SPACESHIP_KUBECTL_SYMBOL
+# SPACESHIP_KUBECTL_VERSION_SHOW=false
+# SPACESHIP_KUBECTL_VERSION_PREFIX
+# SPACESHIP_KUBECONTEXT_SHOW=true
+# SPACESHIP_KUBECONTEXT_NAMESPACE_SHOW=true
+# SPACESHIP_KUBECTL_SHOW=true
+# SPACESHIP_KUBECTL_VERSION_SHOW=false
+# SPACESHIP_KUBECONTEXT_SHOW=true
+
 #e77d
 #f13d
 
@@ -167,7 +179,7 @@ SPACESHIP_DIR_TRUNC='1' # show only last directory
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-nvm git z zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(zsh-nvm git z kubectl zsh-syntax-highlighting zsh-autosuggestions)
 
 #~/z.sh
 source $ZSH/oh-my-zsh.sh
@@ -302,6 +314,8 @@ alias kgpv="kubectl get pv"
 alias kgpvc="kubectl get pvc"
 alias kgcm="kubectl get configmap"
 alias kgns="kubectl get namespaces"
+alias kns="kubens"
+alias kctx="kubectx"
 
 # EXPERIMENTAL
 alias insiders='code-insiders'
@@ -387,3 +401,11 @@ fi
 # it has been set up to do so.
 eval "$(pyenv virtualenv-init -)"
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+# ASDF
+. /usr/local/opt/asdf/asdf.sh
+
+# KUBECTL KUBECTX #KUBENS
+unset KUBECONFIG
+source /usr/local/opt/kube-ps1/share/kube-ps1.sh
+PROMPT='$(kube_ps1)'$PROMPT
