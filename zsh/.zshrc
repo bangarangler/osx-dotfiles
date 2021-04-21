@@ -379,6 +379,12 @@ function startday() {
   cd -
 }
 
+function gline() {
+	cd /users/jonathanpalacio/Desktop/Nowigence/pluaris-prod
+	git log --shortstat --author $1 --since "10 years ago" --until "today" | grep "files changed" | awk '{files+=$1; inserted+=$4; deleted+=$6} END {print "files changed", files, "lines inserted:", inserted, "lines deleted:", deleted}'
+  # git log --shortstat --author $1 --since "2021-1-1" --until "2021-4-1" | grep "files changed" | awk '{files+=$1; inserted+=$4; deleted+=$6} END {print "files changed", files, "lines inserted:", inserted, "lines deleted:", deleted}'
+}
+
 # // trying to get openssl to work on new osx delete this later
 # export CFLAGS="-I$(brew --prefix openssl)/include" \
 # export LDFLAGS="-L$(brew --prefix openssl)/lib" \
