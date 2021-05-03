@@ -247,6 +247,7 @@ export PATH="/usr/local/bin:$PATH"
 export BAT_THEME=GitHub
 
 # FUN
+alias fish='asciiquarium'
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 alias skeleton='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/skull.txt'
 alias casper='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/casper-evil.txt'
@@ -417,4 +418,6 @@ source /usr/local/opt/kube-ps1/share/kube-ps1.sh
 PROMPT='$(kube_ps1)'$PROMPT
 
 # GO
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
+export GO111MODULE=auto
