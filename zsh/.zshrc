@@ -242,7 +242,7 @@ export PATH="/usr/local/bin:$PATH"
 
 #date | lolcat
 #lolcat /Users/jonathanpalacio/Desktop/dev/ascii/skull.txt
-#figlet -f whimsy Dain! | lolcat
+# figlet -f whimsy Dain! | lolcat
 #cal | lolcat
 export BAT_THEME=GitHub
 
@@ -265,6 +265,12 @@ alias gyarados='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/gyarados.txt'
 alias eevee='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/eevee.txt'
 alias dragonite='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/dragonite.txt'
 alias lady='lolcat /Users/jonathanpalacio/Desktop/dev/ascii/lady.txt'
+# alias say="figlet -f whimsy Oh Frabjous Day | lolcat"
+
+function logPretty() {
+  figlet -f whimsy $1 | lolcat
+}
+
 #
 #POSTGRES
 alias pg_start="pg_ctl -D /usr/local/var/postgres start"
