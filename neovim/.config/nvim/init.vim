@@ -143,6 +143,10 @@ Plug 'mhinz/vim-startify'
 " Visual Improvments ---
 Plug 'ryanoasis/vim-devicons'
 
+" SQL ---
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
 " Vimspector
 " Plug 'puremourning/vimspector', {'do': './install_gadget.py'}
 Plug 'puremourning/vimspector'
@@ -188,6 +192,9 @@ call plug#end()
 " set leader key to \
 let mapleader="\\"
 
+" SQL DEV
+source /Users/jonathanpalacio/dotfiles/neovim/.config/nvim/hidden.vim
+map <leader><leader>db :DBUI<CR>
 
 " make nvim work inside python env
 " let g:python3_host_prog = '/Users/jonathanpalacio/.pyenv/versions/3.7.3/bin/python'
@@ -211,6 +218,8 @@ let g:coc_global_extensions = [
       \ 'coc-snippets',
       \ 'coc-git',
       \ 'coc-prettier',
+      \ 'coc-sql',
+      \ 'coc-db',
       \ 'https://github.com/xabikos/vscode-react',
       \ 'https://github.com/skyran1279/js-jsx-snippets',
       \ 'https://github.com/nathanchapman/vscode-javascript-snippets',
