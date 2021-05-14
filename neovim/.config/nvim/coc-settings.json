@@ -87,4 +87,15 @@
     "reason"
   ],
   "graphql.watcherPattern": "**/*.{graphql,gql,js,jsx,ts,tsx,re}"
+  /* "languageserver": { */
+  /*   "golang": { */
+  /*     "command": "gopls", */
+  /*     "filetypes": ["go"], */
+  /*     "initializationOptions": { */
+  /*       "gocodeCompletionEnabled": true, */
+  /*       "diagnostic": true, */
+  /*       "linting": "golint" */
+  /*     } */
+  /*   } */
+  /* } */
 }
