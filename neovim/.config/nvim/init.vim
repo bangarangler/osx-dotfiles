@@ -143,6 +143,7 @@ Plug 'mhinz/vim-startify'
 
 " Visual Improvments ---
 Plug 'ryanoasis/vim-devicons'
+" Plug 'kyazdani42/nvim-web-devicons'
 
 " SQL ---
 Plug 'tpope/vim-dadbod'
