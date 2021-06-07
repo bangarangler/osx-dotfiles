@@ -179,7 +179,7 @@ SPACESHIP_DIR_TRUNC='1' # show only last directory
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-nvm git z kubectl zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(zsh-nvm git z you-should-use kubectl zsh-syntax-highlighting zsh-autosuggestions)
 
 #~/z.sh
 source $ZSH/oh-my-zsh.sh
