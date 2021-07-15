@@ -43,7 +43,8 @@ Plug 'kabbamine/vcoolor.vim'
 Plug 'ntpeters/vim-better-whitespace'
 
 " Motion Plugins ---
-Plug 'easymotion/vim-easymotion'
+Plug 'phaazon/hop.nvim'
+" Plug 'easymotion/vim-easymotion'
 Plug 'unblevable/quick-scope'
 Plug 'kshenoy/vim-signature'
 
@@ -310,6 +311,23 @@ set foldnestmax=10 " deepest fold is 10 levels
 set nofoldenable " don't fold by default
 set foldlevel=1
 
+" nvim HOP
+" hop around by highlighting words.
+nnoremap <leader><leader>hw :HopWord<CR>
+" hop around by matching against a pattern (as with /).
+nnoremap <leader><leader>hp :HopPattern<CR>
+"type a single key and hop to any occurrence of that key in the document.
+nnoremap <leader><leader>hc :HopChar1<CR>
+"type a bigram (two keys) and hop to any occurrence of that bigram in the document.
+nnoremap <leader><leader>h2c :HopChar2<CR>
+"jump to any visible line in your buffer.
+nnoremap <leader><leader>hl :HopLine<CR>
+" hi HopNextKey guifg=#ff79c6
+" hi HopNextKey1 guifg=#bd93f9
+" hi HopNextKey2 guifg=#50fa7b
+" require'hop'.setup()
+lua require'hop'.setup {}
+
 " map to fold
 nnoremap <space> za
 
@@ -521,6 +539,7 @@ endfunc
 " Leader nt toggles relative/number
 nnoremap <leader>nt :call LineNumberToggle()<cr>
 
+
 " Search
 set showmatch
 set wildmenu
@@ -590,7 +609,7 @@ nnoremap <leader>gm :Merginal<CR>
 
 " NERDTree Settings
 "NERDTree toggle
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
 
 " Indent Guide Plugin Settings
 "<Leader>ig "toggles indent guides
