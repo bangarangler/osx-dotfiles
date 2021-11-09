@@ -539,6 +539,17 @@ endfunc
 " Leader nt toggles relative/number
 nnoremap <leader>nt :call LineNumberToggle()<cr>
 
+" Function called with leader leader rr (will repeat the char you are prompted
+" for the x number of times prompted for) good for making lines or similar
+" things
+function! RepeatChar()
+  let times = input("Count: ")
+  let char = input("Char: ")
+  exe ":norm a" . repeat(char, times)
+endfunc
+
+nnoremap <leader><leader>rr :call RepeatChar()<cr>
+
 
 " Search
 set showmatch
