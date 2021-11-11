@@ -86,7 +86,8 @@
     "typescriptreact",
     "reason"
   ],
-  "graphql.watcherPattern": "**/*.{graphql,gql,js,jsx,ts,tsx,re}"
+  "graphql.watcherPattern": "**/*.{graphql,gql,js,jsx,ts,tsx,re}",
+  "svelte.enable-ts-plugin": true
   /* "languageserver": { */
   /*   "golang": { */
   /*     "command": "gopls", */
