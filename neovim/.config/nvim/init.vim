@@ -154,6 +154,11 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 " Plug 'puremourning/vimspector', {'do': './install_gadget.py'}
 Plug 'puremourning/vimspector'
 
+" Vim Wiki
+" Plug 'vimwiki/vimwiki'
+" let g:vimwiki_list = [{'path': '~/vimwiki/',
+"                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
 " Testing / No longer used"
 "Plug 'ludovicchabant/vim-gutentags'
 "Plug 'vim-scripts/Conque-GDB'
