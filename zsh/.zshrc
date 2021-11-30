@@ -379,7 +379,7 @@ alias workProd="tmuxinator workProd"
 alias bangProj='tmuxinator bangProj'
 alias vaultWeb='tmuxinator vaultWeb'
 alias vaultBounceList='tmuxinator vaultBounceList'
-
+alias vaultWebPlus='tmuxinator vaultWebPlus'
 
 # SYSTEM OSX
 alias c="clear"
