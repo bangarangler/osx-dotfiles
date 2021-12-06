@@ -324,6 +324,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 export PATH=$PATH:/Users/jonathanpalacio/Library/Android/sdk/platform-tools/
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 
 # TO BE DELETED
