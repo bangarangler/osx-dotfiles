@@ -244,6 +244,7 @@ let g:coc_global_extensions = [
       \ 'coc-pyright',
       \ 'coc-python',
       \ 'coc-go',
+      \ 'coc-java',
       \ 'coc-explorer', ]
 
 " Fails to load sometimes. mapping to install
