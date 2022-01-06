@@ -29,7 +29,7 @@ map <leader><leader>w <Plug>(easymotion-s)
 map <leader><leader>b <Plug>(easymotion-f)
 
 " map <leader>d <Action>(Debug)
-map <leader>r <Action>(RenameElement)
+map <leader>rn <Action>(RenameElement)
 map <leader>c <Action>(Stop)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
@@ -38,5 +38,17 @@ map <leader>z <Action>(ToggleDistractionFreeMode)
 " map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map <S-Space> <Action>(GotoNextError)
 
-map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>b <Action>(RecentFiles)
 map <leader>f <Action>(FileStructurePopup)
+map <leader>nf <Action>(SearchEverywhere)
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+nnoremap <leader>a :action Refactorings.QuickListPopupAction<CR>
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+
