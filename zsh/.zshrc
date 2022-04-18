@@ -381,6 +381,7 @@ alias bangProj='tmuxinator bangProj'
 alias vaultWeb='tmuxinator vaultWeb'
 alias vaultBounceList='tmuxinator vaultBounceList'
 alias vaultWebPlus='tmuxinator vaultWebPlus'
+alias vssClaimsUi='tmuxinator vss-claims-ui'
 
 # SYSTEM OSX
 alias c="clear"
