@@ -527,7 +527,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # ASDF
 . /usr/local/opt/asdf/asdf.sh
-. ~/.asdf/plugins/java/set-java-home.zsh
+# . ~/.asdf/plugins/java/set-java-home.zsh
 
 # KUBECTL KUBECTX #KUBENS
 unset KUBECONFIG
