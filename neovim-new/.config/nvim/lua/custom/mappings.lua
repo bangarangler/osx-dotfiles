@@ -14,7 +14,7 @@ M.general = {
     ["<C-e>"] = { "3<C-e>", "Scroll Down Quickly" },
     ["<C-y>"] = { "3<C-y>", "Scroll Up Quickly" },
     ["jk"] = { "<esc>", "Exit Insert Mode" },
-    ["<leader>l"] = { ":noh<CR><C-L>" },
+    ["<leader><leader>l"] = { ":noh<CR><C-L>" },
 
     --  format with conform
     ["<leader>fm"] = {
