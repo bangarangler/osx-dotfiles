@@ -526,7 +526,8 @@ eval "$(pyenv virtualenv-init -)"
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # ASDF
-. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
+# . /usr/local/opt/asdf/asdf.sh
 # . ~/.asdf/plugins/java/set-java-home.zsh
 
 # KUBECTL KUBECTX #KUBENS
