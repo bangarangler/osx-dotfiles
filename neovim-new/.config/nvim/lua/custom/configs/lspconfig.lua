@@ -31,6 +31,8 @@ end
 
 -- GO
 lspconfig.gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
   cmd = { "gopls" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
   root_dir = util.root_pattern("go.work", "go.mod", ".git"),
@@ -47,6 +49,8 @@ lspconfig.gopls.setup {
 
 -- TYPESCRIPT | JAVASCRIPT
 lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
   init_options = {
     preferences = {
       disableSuggestions = true,
@@ -56,10 +60,14 @@ lspconfig.tsserver.setup {
 
 -- PYTHON
 lspconfig.pyright.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
   filetypes = { "python" },
 }
 
 lspconfig.jsonls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     json = {
       schemas = require("schemastore").json.schemas(),
@@ -69,6 +77,8 @@ lspconfig.jsonls.setup {
 }
 
 lspconfig.yamlls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     yaml = {
       schemaStore = {
