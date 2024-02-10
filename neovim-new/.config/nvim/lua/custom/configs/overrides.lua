@@ -14,6 +14,9 @@ M.treesitter = {
     "markdown_inline",
     "go",
     "python",
+    "json",
+    "yaml",
+    "toml",
   },
   indent = {
     enable = true,
