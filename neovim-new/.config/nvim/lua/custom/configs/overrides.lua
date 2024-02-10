@@ -44,7 +44,6 @@ M.mason = {
     "sqlls",
     "bash-language-server",
     "emmet-ls",
-
     -- c/cpp stuff
     "clangd",
     "clang-format",

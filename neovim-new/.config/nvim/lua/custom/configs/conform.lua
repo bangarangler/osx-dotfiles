@@ -11,6 +11,7 @@ local options = {
 
     javascript = { "prettier", "eslint" },
     typescript = { "prettier", "eslint" },
+    javascriptreact = {"prettier", "eslint"},
     css = { "prettier" },
     html = { "prettier" },
 
