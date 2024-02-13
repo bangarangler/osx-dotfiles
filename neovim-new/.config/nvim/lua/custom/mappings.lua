@@ -14,7 +14,13 @@ M.general = {
     ["<C-e>"] = { "3<C-e>", "Scroll Down Quickly" },
     ["<C-y>"] = { "3<C-y>", "Scroll Up Quickly" },
     ["jk"] = { "<esc>", "Exit Insert Mode" },
-    ["<leader><leader>l"] = { ":noh<CR><C-L>" },
+    ["<leader><leader>l"] = { ":noh<CR><C-L>", "Remove search highlights" },
+    ["<leader>m"] = { ":bufdo! bw<CR>", "Close all buffers"},
+    ["<C-h>"] = { ":TmuxNavigateLeft<CR>", "Tmux/Nvim Move Left"},
+    ["<C-j>"] = { ":TmuxNavigateDown<CR>", "Tmux/Nvim Move Down"},
+    ["<C-k>"] = { ":TmuxNavigateUp<CR>", "Tmux/Nvim Move Up"},
+    ["<C-l>"] = { ":TmuxNavigateRight<CR>", "Tmux/Nvim Move Right"},
+    ["<C-\\>"] = { ":TmuxNavigatePrevious<CR>", "Tmux/Nvim Move Previous"},
 
     --  format with conform
     ["<leader>fm"] = {
