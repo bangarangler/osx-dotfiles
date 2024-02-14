@@ -1,15 +1,21 @@
 #! /bin/sh
 
 echo "restoring computer dotfiles"
-stow zsh
+# stow zsh
+stow zsh-new
 # stow neovim
 stow neovim-new
-stow alacritty
+# stow alacritty
+stow alacritty-new
 #stow i3
 #stow Xresources
-stow tmux
+# stow tmux
+stow tmux-new
 #stow compton
-stow vim
+# stow vim
 stow tmuxinator
-stow datagrip
+# stow datagrip
+stow asdf
+stow fzf
+stow spaceship
 echo "We are done restoring dotfiles!"
