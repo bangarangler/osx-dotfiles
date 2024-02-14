@@ -1,6 +1,7 @@
 /neovim/.config/nvim/plugged/
 /neovim/.config/nvim/hidden.vim
 /zsh/.env
+/zsh-new/.env
 .env
 /alacritty/.config/alacritty/alacritty-master
 /alacritty/.config/alacritty/dracula.yml
