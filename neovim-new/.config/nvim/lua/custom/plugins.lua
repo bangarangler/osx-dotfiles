@@ -102,7 +102,6 @@ local plugins = {
 	{
 		"b0o/schemastore.nvim",
 	},
-  
 	{
 		"christoomey/vim-tmux-navigator",
 	   lazy = false,
@@ -127,6 +126,12 @@ local plugins = {
 			})
 		end,
 	},
+  {
+    'smoka7/hop.nvim',
+    version = "*",
+    opts = {},
+    lazy = false,
+},
 	-- {
 	--   'davidcelis/vim-ariake-dark',
 	-- },

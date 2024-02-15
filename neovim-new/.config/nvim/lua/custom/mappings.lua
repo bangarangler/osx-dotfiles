@@ -21,6 +21,12 @@ M.general = {
     ["<C-k>"] = { ":TmuxNavigateUp<CR>", "Tmux/Nvim Move Up"},
     ["<C-l>"] = { ":TmuxNavigateRight<CR>", "Tmux/Nvim Move Right"},
     ["<C-\\>"] = { ":TmuxNavigatePrevious<CR>", "Tmux/Nvim Move Previous"},
+    ["<leader><leader>f"] = { ":HopAnywhere<CR>", "Hop Anywhere"},
+    ["<leader><leader>fw"] = { ":HopWord<CR>", "Hop Word"},
+    ["<leader><leader>fc"] = { ":HopChar2<CR>", "Hop Character Two or if only one letter hit enter"},
+    ["<leader><leader>fl"] = { ":HopLine<CR>", "Hop Line"},
+    ["<leader><leader>fls"] = { ":HopLineStart<CR>", "Hop Line Start"},
+    ["<leader><leader>fp"] = { ":HopPattern<CR>", "Hop Pattern"},
 
     --  format with conform
     ["<leader>fm"] = {
