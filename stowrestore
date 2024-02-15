@@ -18,4 +18,6 @@ stow tmuxinator
 stow asdf
 stow fzf
 stow spaceship
+stow bashtop
 echo "We are done restoring dotfiles!"
+
