@@ -104,7 +104,7 @@ local plugins = {
 	},
 	{
 		"christoomey/vim-tmux-navigator",
-	   lazy = false,
+		lazy = false,
 		cmd = {
 			"TmuxNavigateLeft",
 			"TmuxNavigateDown",
@@ -126,12 +126,16 @@ local plugins = {
 			})
 		end,
 	},
-  {
-    'smoka7/hop.nvim',
-    version = "*",
-    opts = {},
+	{
+		"smoka7/hop.nvim",
+		version = "*",
+		opts = {},
+		lazy = false,
+	},
+	{
+		"tpope/vim-fugitive",
     lazy = false,
-},
+	},
 	-- {
 	--   'davidcelis/vim-ariake-dark',
 	-- },
