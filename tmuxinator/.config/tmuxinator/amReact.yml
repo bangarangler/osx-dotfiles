@@ -2,7 +2,7 @@
 
 name: amReact
 # root: ~/Desktop
-root: ~/dev/AM-REACT/content-management
+root: ~/dev/AM-REACT/react-context
 
 # Optional tmux socket
 # socket_name: foo
