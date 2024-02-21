@@ -2,7 +2,7 @@
 
 name: amReact
 # root: ~/Desktop
-root: ~/dev/AM-REACT/place-picker
+root: ~/dev/AM-REACT/quiz-react
 
 # Optional tmux socket
 # socket_name: foo
