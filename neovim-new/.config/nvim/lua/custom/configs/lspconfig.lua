@@ -53,7 +53,7 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
   init_options = {
     preferences = {
-      disableSuggestions = true,
+      disableSuggestions = false,
     },
   },
 }
