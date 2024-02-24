@@ -27,6 +27,12 @@ M.general = {
     ["<leader><leader>fl"] = { ":HopLine<CR>", "Hop Line"},
     ["<leader><leader>fls"] = { ":HopLineStart<CR>", "Hop Line Start"},
     ["<leader><leader>fp"] = { ":HopPattern<CR>", "Hop Pattern"},
+    ["<leader><leader>t"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Toggle floating term",
+    },
 
     --  format with conform
     ["<leader>fm"] = {
