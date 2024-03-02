@@ -2,7 +2,7 @@
 
 name: amReact
 # root: ~/Desktop
-root: ~/dev/AM-REACT/behind-the-scenes
+root: ~/dev/AM-REACT/requests-react
 
 # Optional tmux socket
 # socket_name: foo
