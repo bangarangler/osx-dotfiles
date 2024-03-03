@@ -245,14 +245,15 @@ alias amReact='tmuxinator amReact'
 
 # SYSTEM OSX
 alias c="clear"
+alias e="exit"
 alias update='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
 # alias fuck='sudo !!'
 alias fuck='sudo $(fc -ln -1)'
 # alias ls=colorls —-sd
 # alias yabaistart='brew services start koekeishiya/formulae/yabai && brew services start skhd'
 # alias yabaistop='brew services stop koekeishiya/formulae/yabai && brew services stop skhd'
-alias iconsoff='defaults write com.apple.finder CreateDesktop -bool false;killall Finder;say icons hidden'
-alias iconson='defaults write com.apple.finder CreateDesktop -bool true;killall Finder;say icons visible'
+# alias iconsoff='defaults write com.apple.finder CreateDesktop -bool false;killall Finder;say icons hidden'
+# alias iconson='defaults write com.apple.finder CreateDesktop -bool true;killall Finder;say icons visible'
 # alias ctags="`brew --prefix`/bin/ctags"
 
 # DOCKER
