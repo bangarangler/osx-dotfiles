@@ -278,6 +278,10 @@ alias dils="d image ls"
 alias dcls="d container ls"
 alias dl="d logs"
 
+# LAZY
+alias ldoc="lazydocker"
+alias lg="lazygit"
+
 # KUBERNETES ALIASES
 alias kgp="kubectl get pods"
 alias kgd="kubectl get deployments"
