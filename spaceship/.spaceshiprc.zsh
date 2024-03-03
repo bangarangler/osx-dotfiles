@@ -11,10 +11,10 @@ SPACESHIP_PROMPT_ORDER=(
   kubectl
   #ruby
   #xcode
-  swift
+  # swift
   golang
   docker
-  venv
+  # venv
   #pyenv
 )
 SPACESHIP_VI_MODE_SHOW=false
