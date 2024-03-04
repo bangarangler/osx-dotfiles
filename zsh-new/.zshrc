@@ -238,6 +238,7 @@ alias pcstatus="tmuxinator pcstatus"
 alias workProd="tmuxinator workProd"
 alias bangProj='tmuxinator bangProj'
 alias amReact='tmuxinator amReact'
+alias bdsmTracker='tmuxinator bdsmTracker'
 # alias vaultWeb='tmuxinator vaultWeb'
 # alias vaultBounceList='tmuxinator vaultBounceList'
 # alias vaultWebPlus='tmuxinator vaultWebPlus'
