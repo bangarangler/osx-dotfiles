@@ -356,9 +356,9 @@ autoload -Uz compinit && compinit
 # GO
 . ~/.asdf/plugins/golang/set-env.zsh
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
- # export PATH=$PATH:/usr/local/go/bin
- # export PATH=$PATH:$(go env GOPATH)/bin
- # export GO111MODULE=auto
+# export PATH=$PATH:/usr/local/go/bin
+# export PATH=$PATH:$(go env GOPATH)/bin
+# export GO111MODULE=auto
 
 source /opt/homebrew/opt/spaceship/spaceship.zsh
 
