@@ -322,7 +322,8 @@ alias v1s="sshpass -p ${V1_PW} ssh ${V1_USER}"
 alias aris="sshpass -p ${ARIS_PW} ssh ${ARIS_USER}"
 alias nowwp="sshpass -p ${NOW_WP_PW} ssh ${NOW_WP_USER}"
 alias mav="sshpass -p ${MAVERICK_PW} ssh ${MAVERICK_USER}"
-alias goose="sshpass -p ${GOOSE_PW} ssh ${GOOSE_USER}"
+# CONFLICT with GOOSE tool
+# alias goose="sshpass -p ${GOOSE_PW} ssh ${GOOSE_USER}"
 alias merlin="sshpass -p ${MERLIN_PW} ssh ${MERLIN_USER}"
 
 # TODO: PERSONAL
