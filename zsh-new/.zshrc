@@ -165,6 +165,7 @@ ZSH_HIGHLIGHT_STYLES[default]='fg=#F8F8F2'
 # END DRAC THEME 
 
 source $ZSH/oh-my-zsh.sh
+source /Users/jonathanpalacio/dotfiles/zsh-new/.env
 
 # User configuration
 
@@ -328,6 +329,9 @@ alias merlin="sshpass -p ${MERLIN_PW} ssh ${MERLIN_USER}"
 
 # TODO: PERSONAL
 alias bang="sshpass -p ${BANGARANGLER_PW} ssh ${BANGARANGLER_USER}"
+
+# bdsmTracker
+alias pgBdsm="pgcli postgres://${PG_USER_BDSM}:${PG_PW_BDSM}@${PG_HOST_BDSM}:${PG_PORT_BDSM}/${PG_DB_NAME_BDSM}"
 
 # TODO:
 function stowrestore() {

@@ -461,6 +461,9 @@ alias merlin="sshpass -p ${MERLIN_PW} ssh ${MERLIN_USER}"
 # PERSONAL
 alias bang="sshpass -p ${BANGARANGLER_PW} ssh ${BANGARANGLER_USER}"
 
+# bdsmTracker
+alias pgBdsm="pgcli postgres://${PG_USER_BDSM}:${PG_PASS_BDSM}@${PG_HOST_BDSM}:${PG_PORT_BDSM}/${PG_DB_NAME_BDSM}"
+
 eval "$(rbenv init -)"
 
 
