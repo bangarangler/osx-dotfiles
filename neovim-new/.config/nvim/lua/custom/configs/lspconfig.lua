@@ -17,6 +17,8 @@ local servers = {
   "dockerls",
   "yamlls",
   "jsonls",
+  "svelte",
+  "templ"
 }
 
 for _, lsp in ipairs(servers) do
@@ -34,7 +36,7 @@ lspconfig.gopls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = { "gopls" },
-  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl", "templ" },
   root_dir = util.root_pattern("go.work", "go.mod", ".git"),
   settings = {
     gopls = {
@@ -91,4 +93,10 @@ lspconfig.yamlls.setup {
       schemas = require("schemastore").yaml.schemas(),
     },
   },
+}
+
+lspconfig.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "html", "templ" },
 }

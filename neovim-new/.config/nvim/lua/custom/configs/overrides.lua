@@ -17,6 +17,10 @@ M.treesitter = {
 		"json",
 		"yaml",
 		"toml",
+		"templ",
+		"xml",
+		"http",
+		"graphql",
 	},
 	indent = {
 		enable = true,
@@ -45,6 +49,7 @@ M.mason = {
 		"yaml-language-server",
 		"jq-lsp",
 		"sqlls",
+		"svelte-language-server",
 		"bash-language-server",
 		"emmet-ls",
 		-- c/cpp stuff
@@ -53,6 +58,7 @@ M.mason = {
 
 		-- GO
 		"gopls",
+		"templ",
 
 		-- DOCKER
 		"docker-compose-language-service",

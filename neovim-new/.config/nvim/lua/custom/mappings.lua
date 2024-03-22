@@ -40,6 +40,8 @@ M.general = {
 			end,
 			"formatting",
 		},
+		["<leader>rr"] = { ":Rest run<CR>", "Run Rest Client" },
+		["<leader>rl"] = { ":Rest run last<CR>", "Re-run latest request" },
 	},
 	v = {
 		[">"] = { ">gv", "indent" },

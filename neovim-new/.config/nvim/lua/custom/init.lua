@@ -9,4 +9,5 @@
 local g = vim.g
 
 g.mapleader = "\\"
+vim.filetype.add({ extension = { templ = "templ"} })
 -- g.transparency =

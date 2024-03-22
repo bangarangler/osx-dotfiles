@@ -70,6 +70,7 @@ local plugins = {
 		"rcarriga/nvim-dap-ui",
 		event = "VeryLazy",
 		dependencies = "mfussenegger/nvim-dap",
+		"nvim-neotest/nvim-nio",
 		config = function()
 			local dap = require("dap")
 			local dapui = require("dapui")
@@ -150,6 +151,35 @@ local plugins = {
 			-- or run <leader>ch to see copilot mapping section
 		end,
 	},
+	-- {
+	-- 	"vhyrro/luarocks.nvim",
+	-- 	config = function()
+	-- 		require("luarocks").setup({})
+	-- 	end,
+	-- },
+	-- {
+	-- 	"vhyrro/luarocks.nvim",
+	-- 	opts = {
+	-- 		rocks = {
+	-- 			"lua-curl",
+	-- 			"nvim-nio",
+	-- 			"mimetypes",
+	-- 			"xml2lua",
+	-- 		},
+	-- 	},
+	-- 	config = function()
+	-- 		require("luarocks").setup({})
+	-- 	end,
+	-- },
+	-- {
+	-- 	"rest-nvim/rest.nvim",
+	-- 	ft = "http",
+	-- 	-- opts = { rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" } },
+	-- 	dependencies = { "luarocks.nvim" },
+	-- 	config = function()
+	-- 		require("rest-nvim").setup()
+	-- 	end,
+	-- },
 	{
 		"stevearc/conform.nvim",
 		--  for users those who want auto-save conform + lazyloading!
