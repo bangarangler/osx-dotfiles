@@ -333,6 +333,9 @@ alias bang="sshpass -p ${BANGARANGLER_PW} ssh ${BANGARANGLER_USER}"
 # bdsmTracker
 alias pgBdsm="pgcli postgres://${PG_USER_BDSM}:${PG_PW_BDSM}@${PG_HOST_BDSM}:${PG_PORT_BDSM}/${PG_DB_NAME_BDSM}"
 
+# bdsmApp
+alias pgApp="pgcli postgres://${PG_USER_APP}:${PG_PW_APP}@${PG_HOST_APP}:${PG_PORT_APP}/${PG_DB_NAME_APP}"
+
 # TODO:
 function stowrestore() {
   ~/dotfiles/

@@ -8,7 +8,7 @@ local util = require "lspconfig/util"
 local servers = {
   "html",
   "cssls",
-  "tsserver",
+  "ts_ls",
   "clangd",
   "tailwindcss",
   "emmet_ls",
@@ -50,7 +50,7 @@ lspconfig.gopls.setup {
 }
 
 -- TYPESCRIPT | JAVASCRIPT
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   init_options = {
