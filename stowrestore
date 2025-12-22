@@ -19,5 +19,6 @@ stow asdf
 stow fzf
 stow spaceship
 stow bashtop
+stow ghostty
 echo "We are done restoring dotfiles!"
 
