@@ -223,6 +223,36 @@ alias eevee='lolcat /Users/jonathanpalacio/dev/ascii/eevee.txt'
 alias dragonite='lolcat /Users/jonathanpalacio/dev/ascii/dragonite.txt'
 alias lady='lolcat /Users/jonathanpalacio/dev/ascii/lady.txt'
 
+# Gostty Fun
+alias goast="gostty -c magenta"
+
+gostty-color() {
+  # Run gostty --colors and capture its output
+  local colors_output=$(gostty --colors)
+
+  # Feed the output directly to fzf for selection
+  # This shows the full colored list on screen for preview/selection
+  local selected=$(echo "$colors_output" | fzf --height=~50% --prompt="Select a color (or ANSI code): " --ansi)
+
+  if [[ -n "$selected" ]]; then
+    # Extract the color value (name or code) from the start of the line
+    # Assumes format like "36: cyan" or similar – takes the part before colon/space
+    local color_value=$(echo "$selected" | awk -F '[: ]' '{print $1}' | head -1)
+
+    # Fallback: if no code found, use the whole trimmed line
+    if [[ -z "$color_value" || "$color_value" == "$selected" ]]; then
+      color_value=$(echo "$selected" | xargs)  # trim whitespace
+    fi
+
+    gostty -c "$color_value" "$@"
+  else
+    # No selection – run with default color
+    gostty "$@"
+  fi
+}
+
+alias goasto='gostty-color'
+
 function logPretty() {
   figlet -f whimsy $1 | lolcat
 }	
