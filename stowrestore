@@ -21,5 +21,6 @@ stow spaceship
 stow bashtop
 stow ghostty
 stow yazi
+stow opencode
 echo "We are done restoring dotfiles!"
 

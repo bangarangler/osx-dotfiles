@@ -70,7 +70,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z you-should-use kubectl zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git z you-should-use kubectl zsh-syntax-highlighting zsh-autosuggestions mise)
 
 # Dracula Theme (for zsh-syntax-highlighting)
 #
@@ -385,19 +385,17 @@ function gline() {
 }
 
 # TODO: ASDF
-. "$HOME/.asdf/asdf.sh"
+# . "$HOME/.asdf/asdf.sh"
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+# fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 # . /usr/local/opt/asdf/libexec/asdf.sh
 
 # GO
-. ~/.asdf/plugins/golang/set-env.zsh
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-# export PATH=$PATH:/usr/local/go/bin
-# export PATH=$PATH:$(go env GOPATH)/bin
-# export GO111MODULE=auto
+# . ~/.asdf/plugins/golang/set-env.zsh
+# export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
 source /opt/homebrew/opt/spaceship/spaceship.zsh
 
+eval "$(/Users/jonathanpalacio/.local/bin/mise activate zsh)"
