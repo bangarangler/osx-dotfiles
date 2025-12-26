@@ -1,0 +1,35 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "lsp": {
+    "go": {
+      "command": "gopls",
+      "env": {
+        "GOTOOLCHAIN": "go1.25.5"
+      }
+    },
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": [
+        "--stdio"
+      ]
+    },
+    "svelte": {
+      "command": "svelteserver",
+      "args": [
+        "--stdio"
+      ]
+    }
+  },
+  "mcp": {
+    "svelte": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@sveltejs/mcp"
+      ],
+      "timeout": 120,
+      "disabled": false
+    }
+  }
+}

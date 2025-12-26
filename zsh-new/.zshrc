@@ -396,6 +396,9 @@ function gline() {
 # . ~/.asdf/plugins/golang/set-env.zsh
 # export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
+# opencode
+alias oce="OPENCODE_EXPERIMENTAL_LSP_TOOL=true opencode"
+
 source /opt/homebrew/opt/spaceship/spaceship.zsh
 
 eval "$(/Users/jonathanpalacio/.local/bin/mise activate zsh)"

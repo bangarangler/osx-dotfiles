@@ -22,5 +22,6 @@ stow bashtop
 stow ghostty
 stow yazi
 stow opencode
+stow crush
 echo "We are done restoring dotfiles!"
 
