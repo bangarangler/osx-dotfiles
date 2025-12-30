@@ -31,5 +31,10 @@
       "timeout": 120,
       "disabled": false
     }
+  },
+  "options": {
+    "skills_paths": [
+      "~/.config/crush/skills"
+    ]
   }
 }
