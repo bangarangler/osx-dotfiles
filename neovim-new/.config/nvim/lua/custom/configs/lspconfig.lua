@@ -1,7 +1,6 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
 -- if you just want default config for the servers then put them in a table
@@ -21,18 +20,18 @@ local servers = {
   "templ"
 }
 
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
+for _, server in ipairs(servers) do
+  vim.lsp.config(server, {
     on_attach = on_attach,
     capabilities = capabilities,
-  }
+  })
+
+  vim.lsp.enable(server)
 end
 
---
--- lspconfig.pyright.setup { blabla}
 
 -- GO
-lspconfig.gopls.setup {
+vim.lsp.config("gopls", {
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = { "gopls" },
@@ -47,10 +46,10 @@ lspconfig.gopls.setup {
       },
     },
   },
-}
+})
 
 -- TYPESCRIPT | JAVASCRIPT
-lspconfig.ts_ls.setup {
+vim.lsp.config("ts_ls", {
   on_attach = on_attach,
   capabilities = capabilities,
   init_options = {
@@ -58,16 +57,16 @@ lspconfig.ts_ls.setup {
       disableSuggestions = false,
     },
   },
-}
+})
 
 -- PYTHON
-lspconfig.pyright.setup {
+vim.lsp.config("pyright", {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "python" },
-}
+})
 
-lspconfig.jsonls.setup {
+vim.lsp.config("jsonls", {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -76,9 +75,9 @@ lspconfig.jsonls.setup {
       validate = { enable = true },
     },
   },
-}
+})
 
-lspconfig.yamlls.setup {
+vim.lsp.config("yamlls", {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -93,10 +92,10 @@ lspconfig.yamlls.setup {
       schemas = require("schemastore").yaml.schemas(),
     },
   },
-}
+})
 
-lspconfig.html.setup {
+vim.lsp.config("html", {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "html", "templ" },
-}
+})
